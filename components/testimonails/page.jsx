@@ -63,7 +63,7 @@ export default function Testimonials() {
     ]
 
     return (
-        <section className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden bg-gray-950 ">
+        <section className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
             <div className="mx-auto container">
                 <div className="flex items-center justify-between">
                     <h2 className="text-3xl font-bold text-white">

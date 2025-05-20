@@ -1,4 +1,5 @@
 import AboutUs from "@/components/about-us/page";
+import Alumni from "@/components/aluminies/page";
 import Banner from "@/components/banner/page";
 import CaseStudy from "@/components/case-study/page";
 import CourseCurriculum from "@/components/course-curriculum/page";
@@ -28,6 +29,7 @@ export default function Home() {
       <Pricing />
       <CaseStudy />
       <VideoTestimonialSlider />
+      <Alumni />
       <Testimonials />
     </>
   );
