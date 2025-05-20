@@ -1,0 +1,60 @@
+.banner-section {
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.banner-section h1 {
+    font-size: 3.6rem;
+    color: white;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.banner-section h1 span {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.banner-section p {
+    color: white;
+}
+
+.overlap-div-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #dedada3b;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff25;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.overlap-div-2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #dedada3b;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff25;
+    position: absolute;
+    bottom: 0;
+}
+
+.overlap-div-1 h4,
+.overlap-div-2 h4 {
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.overlap-div-1 p,
+.overlap-div-2 p {
+    font-size: 12px;
+}

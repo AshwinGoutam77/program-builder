@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --background: #ffffff;
@@ -20,7 +21,63 @@
 }
 
 body {
-  background: var(--background);
+  background: #0D0D15;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.main-section {
+  background-image: url('../public/images/home-bg.png');
+  background-size: cover;
+}
+
+.gradient {
+  font-weight: bold;
+  background: linear-gradient(90deg, hsla(255, 92%, 76%, 1) 0%, hsla(172, 66%, 50%, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header .primary-btn {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.primary-btn {
+  background-color: white;
+  border-radius: 100px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  /* width: 100%; */
+}
+
+.primary-btn svg {
+  width: 16px;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border-radius: 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  padding: 12px 20px;
+  font-weight: 600;
+  border: 1px solid #ffffff3b;
+  cursor: pointer;
 }
