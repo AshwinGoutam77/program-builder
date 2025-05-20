@@ -4,6 +4,7 @@ import Banner from "@/components/banner/page";
 import CaseStudy from "@/components/case-study/page";
 import CourseCurriculum from "@/components/course-curriculum/page";
 import CTA from "@/components/cta/page";
+import PhotoGallery from "@/components/gallery/page";
 import Header from "@/components/header/header";
 import Pricing from "@/components/pricing/page";
 import ProductManagement from "@/components/product-management/page";
@@ -31,6 +32,7 @@ export default function Home() {
       <VideoTestimonialSlider />
       <Alumni />
       <Testimonials />
+      <PhotoGallery />
     </>
   );
 }

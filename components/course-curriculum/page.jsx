@@ -12,7 +12,7 @@ export default function CourseCurriculum() {
     }
 
     return (
-        <div className="bg-black text-white py-20 px-4 md:px-6">
+        <div className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden bg-gray-950">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-10">
                     <p className="gradient mb-1">Course Curriculum</p>

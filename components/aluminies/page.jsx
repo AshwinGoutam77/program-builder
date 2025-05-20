@@ -25,6 +25,13 @@ const caseStudies = [
             "SPM @ Service Now",
         image: "/images/alumini-3.jpeg",
     },
+    {
+        title: "Varun Khanna",
+        exp: "12+ Years of Exp",
+        summary:
+            "Product Lead @ Google",
+        image: "/images/alumini-1.jpeg",
+    },
 ]
 
 export default function Alumni() {
@@ -41,13 +48,13 @@ export default function Alumni() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                     {caseStudies.map((study, i) => (
                         <div
                             key={i}
                             className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-violet-500/30 transition duration-300 group"
                         >
-                            <div className="h-80 bg-gradient-to-br from-violet-900/30 to-teal-900/30 relative">
+                            <div className="h-70 bg-gradient-to-br from-violet-900/30 to-teal-900/30 relative">
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <img
                                         src={study.image}
