@@ -21,17 +21,17 @@ export default function Home() {
         <Header />
         <Banner />
         <ProductManagement />
+        <ProgramTabsSection />
+        <AboutUs />
       </div>
-      <ProgramTabsSection />
       <ProjectOverview />
-      <AboutUs />
-      <CTA />
-      <CourseCurriculum />
-      <Pricing />
-      <CaseStudy />
-      <VideoTestimonialSlider />
-      <Alumni />
       <Testimonials />
+      <VideoTestimonialSlider />
+      {/* <CTA /> */}
+      <CourseCurriculum />
+      {/* <Pricing /> */}
+      {/* <CaseStudy /> */}
+      <Alumni />
       <PhotoGallery />
     </>
   );

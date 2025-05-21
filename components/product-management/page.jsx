@@ -5,47 +5,37 @@ const features = [
     {
         name: 'Push to deploy.',
         description:
-            'Est et in pharetra magna adipiscing ornare aliquam.',
-        icon: CloudArrowUpIcon,
+            'From Spotify to Duolingo, visionary founders are demanding an AI-first mindset.    ',
+        icon: '/images/right-click.png',
     },
     {
         name: 'SSL certificates.',
-        description: 'Tellus arcu sed consequat ac velit ut eu blandit.',
-        icon: LockClosedIcon,
+        description: 'AI is not our competitor—it’s our greatest enabler. — Spotify Founder',
+        icon: '/images/right-click.png',
     },
     {
         name: 'Database backups.',
-        description: 'Ullamcorper ornare in et egestas dolor orci.',
-        icon: ServerIcon,
+        description: 'Every PM must be fluent in AI or risk becoming obsolete.— Duolingo Founder',
+        icon: '/images/right-click.png',
     },
 ]
 
 export default function ProductManagement() {
     return (
-        <div className="overflow-hidden py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <section>
+            <div className="container mx-auto">
                 <div className="mx-auto grid items-center max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                     <div className="lg:pt-4 lg:pr-8">
                         <div className="lg:max-w-lg">
-                            <h2 className="gradient">Context & Credibility</h2>
-                            <p className="mt-2 text-2xl font-semibold tracking-tight text-pretty text-white sm:text-4xl">
-                                Product management is changing in the age of AI
-                            </p>
-                            <p className="mt-6 text-lg/7 text-white">
-                                Product management is no longer about execution — it’s about clarity of thought, first principle thinking, and AI-enabled execution. More and more operators hire only if AI can’t automate the work.
-                            </p>
+                            <h2>Product management is changing in the age of AI</h2>
                             <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
                                 {features.map((feature) => (
-                                    <div key={feature.name} className="relative pl-9">
-                                        <dt className="inline font-semibold text-white">
-                                            <feature.icon aria-hidden="true" className="absolute top-1 left-1 size-5" />
-                                            {/* {feature.name} */}
-                                        </dt>{' '}
-                                        <dd className="inline text-white">{feature.description}</dd>
+                                    <div key={feature.name} className="p-0 m-0">
+                                        <p className='text-white flex items-start gap-2'><img src={feature?.icon} alt="icon" className='mt-2' /> {feature.description}</p>
                                     </div>
                                 ))}
                             </dl>
-                            <a href='#' className='text-base/7 mt-10 font-semibold text-white flex'>Find more about the Structure of program <ChevronRightIcon className='w-[5%]'/></a>
+                            <a href='#' className='text-base/7 mt-10 font-semibold text-[#C9C2FF] flex gap-2 items-center'>Find more about the Structure of program  <img src="../../images/light-arrow.png" alt="" /></a>
                         </div>
                     </div>
                     <img
@@ -55,6 +45,6 @@ export default function ProductManagement() {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

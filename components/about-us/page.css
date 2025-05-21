@@ -1,0 +1,24 @@
+.metric-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.metric-box h4 {
+    font-size: 42px;
+    color: white;
+    /* font-weight: 600; */
+}
+
+.metric-box h4 span {
+    font-size: 40px;
+    color: #9C80F4;
+}
+
+.metric-box p {
+    font-size: 14px;
+    /* text-align: center; */
+    color: white;
+    font-weight: 300;
+}

@@ -1,0 +1,33 @@
+.week-box{
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.tabs-content-section .badge{
+    background-color: #6154F3;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.tabs-content-section .badge:last-child{
+    background-color: #FF5324;
+}
+
+.tabs-content-section ul{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tabs-content-section ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}

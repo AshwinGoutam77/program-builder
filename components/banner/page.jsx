@@ -8,8 +8,10 @@ export default function Banner() {
                 <div className="banner-section container mx-auto">
                     <div className="grid grid-cols-1 gap-y-12 gap-x-8 lg:grid-cols-[60%_40%] z-20 relative">
                         <div className="flex flex-col justify-center gap-5">
-                            <h1>Mastering Product Management 2.0</h1>
-                            <p className="w-[80%]">Step into the next generation of product leadership. In a world where AI is transforming how products are built, this program equips you with clarity of thought, first-principle frameworks, and hands-on AI execution skills. Learn to ship winning products faster, think like a founder, and future-proof your career.
+                            <h1>Mastering <span className="block">Product Management 2.0</span></h1>
+                            <p className="font-bold">Become a successful product manager & builder in the Age of AI</p>
+                            <p className="w-[80%]">
+                                Step into the next generation of product leadership. In a world where AI is transforming how products are built, this program equips you with clarity of thought, first-principle frameworks, and hands-on AI execution skills. Learn to ship winning products faster, think like a founder, and future-proof your career. 
                             </p>
                             <div className="flex gap-5">
                                 <button className="primary-btn">Try For Free <ChevronRightIcon /></button>
@@ -18,13 +20,13 @@ export default function Banner() {
                         </div>
                         <div className="relative">
                             <div className="overlap-div-1 backdrop-blur-lg">
-                                <h4>200+</h4>
-                                <p>People placed <span className="block"> at top MNCs</span></p>
+                                <h4>10K</h4>
+                                <p> Learners  <span className="block"> Impacted</span></p>
                             </div>
                             <img src="../../images/sarvan's-image.png" alt="" />
                             <div className="overlap-div-2 backdrop-blur-lg">
                                 <h4>500+</h4>
-                                <p>Product <span className="block">management</span>internships</p>
+                                <p>PM Offers</p>
                             </div>
                         </div>
                     </div>

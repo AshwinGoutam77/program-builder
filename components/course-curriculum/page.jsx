@@ -2,6 +2,7 @@
 
 import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline"
 import { useState } from "react"
+import './page.css'
 
 export default function CourseCurriculum() {
     const [openIndex, setOpenIndex] = useState(0)
@@ -12,7 +13,7 @@ export default function CourseCurriculum() {
     }
 
     return (
-        <div className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden bg-gray-950">
+        <div className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-10">
                     <p className="gradient mb-1">Course Curriculum</p>
@@ -32,15 +33,14 @@ export default function CourseCurriculum() {
                             className="w-full flex items-center justify-between p-4 focus:outline-none"
                         >
                             <div className="flex items-center gap-4 text-left">
-                                <span className="text-gray-400">0{i + 1}</span>
+                                <span className="week-box">Week {i + 1}</span>
                                 <span className="font-medium">
                                     {i === 0
-                                        ? "Become problem obsessed, instead of jumping to solutions"
+                                        ? "Product Thinking in an AI World"
                                         : "Break your goal into actionable input metrics"}
                                 </span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-sm text-gray-400">Week {i + 1}</span>
                                 <ChevronDownIcon
                                     className={`h-4 w-4 transform transition-transform duration-200 ${openIndex === i ? "rotate-180" : ""
                                         }`}
@@ -49,40 +49,45 @@ export default function CourseCurriculum() {
                         </button>
 
                         {openIndex === i && (
-                            <div className="bg-gray-900 px-4 pb-6 pt-2">
+                            <div className="border-t border-gray-800 px-4 pb-6 pt-2">
                                 {i === 0 ? (
                                     <>
                                         {/* Tabs */}
-                                        <div className="flex gap-6 border-b border-gray-800 text-sm">
+                                        <div className="flex gap-10 border-b border-gray-800 text-sm">
                                             {["live", "assignments", "reading"].map((tab) => (
                                                 <button
                                                     key={tab}
                                                     onClick={() => setActiveTab(tab)}
-                                                    className={`py-2 ${activeTab === tab
-                                                        ? "border-b-2 border-white text-white"
+                                                    className={`py-2 text-start w-full ${activeTab === tab
+                                                        ? "border-b-1 border-white text-white"
                                                         : "text-gray-400"
                                                         }`}
                                                 >
                                                     {{
-                                                        live: "Live Session + Lab Session",
-                                                        assignments: "Group Assignments + Presentations",
-                                                        reading: "Pre read/Post read + Recorded lectures",
+                                                        live: "Live Theory Session",
+                                                        assignments: "Live Lab Session",
                                                     }[tab]}
                                                 </button>
                                             ))}
                                         </div>
 
                                         {/* Tab Content */}
-                                        <div className="mt-4">
+                                        <div className="mt-4 tabs-content-section">
                                             {activeTab === "live" && (
                                                 <div className="grid grid-cols-2 items-center gap-6">
-                                                    <img src="../../images/tab-1.png" alt="img" className="rounded" />
+                                                    <img src="../../images/week-1.png" alt="img" className="rounded" />
                                                     <div>
-                                                        <h4 className="text-4xl md:text-2xl font-bold text-white mb-4 text-gray-900 animate-fade-in">Help, advice and guidance from professional consultants</h4>
-                                                        <p className="text-sm mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-                                                            sint. Velit officia consequat duis enim velit mollit. Exercitation veniam
-                                                            consequat sunt nostrud amet.</p>
-                                                        <a href="#" className="text-white text-sm flex items-center gap-2">Follow our Twitter for more <ChevronRightIcon className="w-4" /></a>
+                                                        <div className="flex gap-2">
+                                                            <span className="badge">SATURDAY- 12PM IST</span>
+                                                            <span className="badge"> LIVE • 3hrs</span>
+                                                        </div>
+
+                                                        <ul>
+                                                            <li><img src="/images/right-click.png" alt="icom" />How to think like a 1% Product Manager? </li>
+                                                            <li><img src="/images/right-click.png" alt="icom" />How AI is changing the work of Product Managers?</li>
+                                                            <li><img src="/images/right-click.png" alt="icom" />Where is the future of Product Management?</li>
+                                                            <li><img src="/images/right-click.png" alt="icom" />The Mindset needed to become a 1% Product Manager</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             )}
