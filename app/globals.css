@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 :root {
   --background: #ffffff;
@@ -29,7 +29,7 @@ body {
   font-style: normal;
 }
 
-h2 {      
+h2 {
   font-size: 38px !important;
   font-weight: 600 !important;
   line-height: normal;
@@ -42,14 +42,18 @@ section {
 }
 
 .main-section {
-  background-image: url('../public/images/home-bg.png');
+  background-image: url("../public/images/home-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .gradient {
   font-weight: bold;
-  background: linear-gradient(90deg, hsla(255, 92%, 76%, 1) 0%, hsla(172, 66%, 50%, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    hsla(255, 92%, 76%, 1) 0%,
+    hsla(172, 66%, 50%, 1) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -60,7 +64,6 @@ header .primary-btn {
   font-weight: 600;
   text-align: center;
 }
-
 
 .primary-btn {
   background-color: white;
@@ -94,4 +97,25 @@ header .primary-btn {
   font-weight: 600;
   border: 1px solid #ffffff3b;
   cursor: pointer;
+}
+
+.container {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
 }

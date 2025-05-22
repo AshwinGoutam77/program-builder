@@ -35,7 +35,6 @@ export default function Home() {
       <ProjectOverview />
       <Testimonials />
       <VideoTestimonialSlider />
-      {/* <CTA /> */}
       <CourseCurriculum />
       <SuperSpecial />
       <LaunchByAlumni />
@@ -45,8 +44,6 @@ export default function Home() {
       <Teaching />
       <FAQSection />
       <Footer />
-      {/* <Pricing /> */}
-      {/* <CaseStudy /> */}
     </>
   );
 }
