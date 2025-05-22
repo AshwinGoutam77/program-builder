@@ -18,7 +18,9 @@ import ProjectOverview from "@/components/project-overview/page";
 import Teaching from "@/components/teaching/page";
 import Testimonials from "@/components/testimonails/page";
 import VideoTestimonialSlider from "@/components/video-testimonials/page";
-import Image from "next/image";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import SuperSpecial from "@/components/superSpecial/page";
 
 export default function Home() {
   return (
@@ -35,10 +37,11 @@ export default function Home() {
       <VideoTestimonialSlider />
       {/* <CTA /> */}
       <CourseCurriculum />
+      <SuperSpecial />
       <LaunchByAlumni />
       <Network />
       <Alumni />
-      {/* <VideoSlider /> */}
+      <VideoSlider />
       <Teaching />
       <FAQSection />
       <Footer />

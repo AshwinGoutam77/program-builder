@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 
-const YouTubeModal = ({ show, onClose }) => {
+const YouTubeModal = ({ show, onClose, VideoLink }) => {
     const modalRef = useRef(null)
 
     const handleClickOutside = (e) => {
@@ -41,7 +41,7 @@ const YouTubeModal = ({ show, onClose }) => {
                 <div className="relative w-full rounded-lg" style={{ paddingTop: "56.25%" }}>
                     <iframe
                         className="absolute top-0 left-0 w-full h-full rounded-lg"
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        src={VideoLink}
                         title="How does Shravan teach?"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -1,4 +1,4 @@
-.teaching-section{
+.teaching-section {
     background-image: url('../../public/images/project-overview-bg.png');
     background-size: cover;
     background-position: center;
@@ -9,6 +9,7 @@
     width: 100%;
     border-radius: 16px;
     transition: 1s;
+    cursor: pointer;
 }
 
 .teaching-section h4 {
@@ -43,13 +44,13 @@
     overflow: hidden;
 }
 
-.teaching-section a{
+.teaching-section a {
     overflow: hidden;
     border-radius: 10px;
 }
 
 .teaching-section img:hover {
-    scale: 1.1;
+    scale: 1.05;
 }
 
 .teaching-section h5 {
