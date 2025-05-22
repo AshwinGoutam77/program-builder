@@ -225,6 +225,34 @@ const ProgramOverview = () => {
         'Master Sessions',
     ];
 
+    const tab1 = [
+        "Live online class covering core frameworks of Product Management and First Principles Thinking.",
+        "Every Saturday (12:00PM IST- 4PM IST)",
+        "Doubt Clearance at the end of the end of each sessions",
+    ]
+
+    const tab2 = [
+        "Solve problems and build real-world products with AI.",
+        "Every Sunday (11:30AM IST- 4:00PM IST)",
+        "Every Sunday (11:30AM IST- 4:00PM IST)"
+    ]
+
+    const tab3 = [
+        "Solve product case studies every week through group sessions where communication and collaboration is everything",
+        "Everyday evening- (9PM- whenever sleep wins)"
+    ]
+
+    const tab4 = [
+        "Additional sessions to help you master the craft of Product Thinking",
+        "Watch during the week. Build in the lab.",
+        "Unlocks every Monday. To be finished by end of the week"
+    ]
+
+    const tab5 = [
+        "Sessions with global leaders where they give you the blueprint to success.",
+        "Raw insights, real stories, and answers you won’t find online."
+    ]
+
     return (
         <section className="project-overview-section">
             <div className="container mx-auto">
@@ -235,19 +263,11 @@ const ProgramOverview = () => {
                 <TabNavigation tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
 
                 <div className="mt-12">
-                    {activeTab === 'Theory Sessions' && <LiveWithShravan />}
-                    {activeTab === 'AI Building Lab Sessions' && (
-                        <div className="text-center py-12 text-gray-300">AI Building Lab Sessions content coming soon</div>
-                    )}
-                    {activeTab === 'Group Discussion Sessions' && (
-                        <div className="text-center py-12 text-gray-300">Group Discussion Sessions content coming soon</div>
-                    )}
-                    {activeTab === 'Recorded Sessions' && (
-                        <div className="text-center py-12 text-gray-300">Recorded Sessions content coming soon</div>
-                    )}
-                    {activeTab === 'Master Sessions' && (
-                        <div className="text-center py-12 text-gray-300">Master Sessions content coming soon</div>
-                    )}
+                    {activeTab === 'Theory Sessions' && <LiveWithShravan data={tab1} />}
+                    {activeTab === 'AI Building Lab Sessions' && <LiveWithShravan data={tab2} />}
+                    {activeTab === 'Group Discussion Sessions' && <LiveWithShravan data={tab3} />}
+                    {activeTab === 'Recorded Sessions' && <LiveWithShravan data={tab4} />}
+                    {activeTab === 'Master Sessions' && <LiveWithShravan data={tab5} />}
                 </div>
 
 

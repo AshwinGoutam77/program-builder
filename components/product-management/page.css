@@ -1,0 +1,147 @@
+.project-management-section {
+    margin-bottom: 100px !important;
+}
+
+.pm-cards {
+    position: relative;
+}
+
+.pm-cards .card::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #6154F3;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    filter: blur(12px);
+}
+
+.pm-cards .card:first-child {
+    position: relative;
+    z-index: 1;
+    width: 341px;
+    height: 380px;
+    perspective: 1000px;
+    background-color: #09172b;
+    border: 1px solid #8f86fc;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.pm-cards .card:nth-child(2) {
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    width: 341px;
+    height: 366px;
+    perspective: 1000px;
+    background-color: #09172b;
+    border: 1px solid #8f86fc;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    z-index: 2;
+    padding: 20px;
+}
+
+.pm-cards .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.pm-cards .card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.pm-cards .card-front,
+.pm-cards .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    background-color: white;
+    color: #000;
+}
+
+.pm-cards .card-front {
+    z-index: 2;
+    border: 1px solid #8f86fc;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: white;
+    color: #000;
+}
+
+.pm-cards .card-back {
+    transform: rotateY(180deg);
+    background-color: white;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    text-align: center;
+}
+
+.pm-cards .card-front img {
+    /* max-width: 60px; */
+    margin-bottom: 12px;
+}
+
+.pm-cards h4 {
+    color: #213da0;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.pm-cards p {
+    line-height: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.pm-cards a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.read-now-btn {
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pm-cards .primary-btn{
+    border: 1px solid #ccc;
+}
+
+.read-now-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}

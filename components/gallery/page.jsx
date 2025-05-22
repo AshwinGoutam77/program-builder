@@ -1,141 +1,113 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { CursorArrowRaysIcon } from "@heroicons/react/20/solid"
-import { CloseButton } from "@headlessui/react"
+import React, { useRef, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-export default function PhotoGallery() {
-    const [selectedImage, setSelectedImage] = useState(null)
+const videos = [
+    "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4",
+    "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4",
+    "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4",
+    "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4",
+    "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4",
+];
 
-    const images = [
-        {
-            src: "/images/gallery-1.png",
-            alt: "Gallery of nature and architecture photos",
-            width: 1200,
-            height: 800,
-        },
-        {
-            src: "/images/gallery-2.png",
-            alt: "Green matcha drink",
-            width: 300,
-            height: 400,
-        },
-        {
-            src: "/images/gallery-3.png",
-            alt: "Cacti with flowers",
-            width: 400,
-            height: 300,
-        },
-        {
-            src: "/images/gallery-4.png",
-            alt: "Flowers on light background",
-            width: 400,
-            height: 300,
-        },
-        {
-            src: "/images/gallery-5.png",
-            alt: "Misty ocean view",
-            width: 300,
-            height: 400,
-        },
-        {
-            src: "/images/gallery-6.png",
-            alt: "Circular architecture",
-            width: 300,
-            height: 400,
-        },
-        {
-            src: "/images/gallery-7.png",
-            alt: "Footprints in sand",
-            width: 400,
-            height: 300,
-        },
-        {
-            src: "/images/gallery-1.png",
-            alt: "Wood stove in cabin",
-            width: 300,
-            height: 400,
-        },
-        {
-            src: "/images/gallery-2.png",
-            alt: "Geometric building pattern",
-            width: 400,
-            height: 300,
-        },
-        {
-            src: "/images/gallery-3.png",
-            alt: "Motion blur of traffic",
-            width: 400,
-            height: 300,
-        },
-        {
-            src: "/images/gallery-4.png",
+export default function VideoSlider() {
+    const sliderRef = useRef(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const videoRefs = useRef([]);
 
-            alt: "Red flower",
-            width: 300,
-            height: 300,
-        },
-    ]
-
-    const openModal = (image) => {
-        setSelectedImage(image)
-        document.body.style.overflow = "hidden"
+    // Make sure videoRefs.current always has same length as videos
+    if (videoRefs.current.length !== videos.length) {
+        videoRefs.current = Array(videos.length)
+            .fill()
+            .map((_, i) => videoRefs.current[i] || null);
     }
 
-    const closeModal = () => {
-        setSelectedImage(null)
-        document.body.style.overflow = "auto"
-    }
+    const settings = {
+        centerMode: true,
+        centerPadding: "60px",
+        slidesToShow: 3,
+        infinite: true,
+        speed: 500,
+        arrows: true,
+        beforeChange: () => {
+            // Pause all videos before slide changes
+            videoRefs.current.forEach((video) => {
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0; // reset time for nicer UX
+                }
+            });
+            setIsPlaying(false);
+        },
+        afterChange: (newIndex) => {
+            setCurrentSlide(newIndex);
+        },
+    };
+
+    const togglePlay = () => {
+        const currentVideo = videoRefs.current[currentSlide];
+        if (!currentVideo) return;
+
+        if (isPlaying) {
+            currentVideo.pause();
+            setIsPlaying(false);
+        } else {
+            currentVideo.play();
+            setIsPlaying(true);
+        }
+    };
 
     return (
-        <div className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden bg-gray-950">
-            <div className="container mx-auto">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {images.map((image, index) => (
-                        <div
-                            key={index}
-                            className={`overflow-hidden rounded-lg cursor-pointer transition-transform hover:scale-[1.02] ${index === 0 ? "sm:col-span-2 sm:row-span-2" : index % 5 === 0 ? "sm:col-span-2" : ""
-                                }`}
-                        // onClick={() => openModal(image)}
-                        >
-                            <img
-                                src={image.src || "/placeholder.svg"}
-                                alt={image.alt}
-                                width={image.width}
-                                height={image.height}
-                                className="w-full h-full object-cover"
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
+            <Slider ref={sliderRef} {...settings}>
+                {videos.map((src, i) => {
+                    const isCenter = i === currentSlide;
+                    return (
+                        <div key={i} style={{ padding: 10, position: "relative" }}>
+                            <video
+                                ref={(el) => (videoRefs.current[i] = el)}
+                                src={src}
+                                muted
+                                width="100%"
+                                style={{
+                                    cursor: isCenter ? "pointer" : "default",
+                                    filter: isCenter ? "none" : "grayscale(70%)",
+                                    borderRadius: 8,
+                                }}
+                                onClick={() => {
+                                    if (isCenter) togglePlay();
+                                }}
+                                playsInline
                             />
-                        </div>
-                    ))}
-                </div></div>
 
-            {selectedImage && (
-                <div
-                    className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4"
-                    onClick={closeModal}
-                >
-                    <div className="relative max-w-4xl max-h-[90vh] w-full">
-                        <button
-                            className="absolute top-4 right-4"
-                            onClick={(e) => {
-                                e.stopPropagation()
-                                closeModal()
-                            }}
-                        >
-                            <CloseButton className='w-20 text-white' />
-                        </button>
-                        <img
-                            src={selectedImage.src || "/placeholder.svg"}
-                            alt={selectedImage.alt}
-                            width={selectedImage.width}
-                            height={selectedImage.height}
-                            className="w-full h-auto max-h-[90vh] object-contain"
-                            onClick={(e) => e.stopPropagation()}
-                        />
-                    </div>
-                </div>
-            )}
+                            {isCenter && !isPlaying && (
+                                <button
+                                    onClick={togglePlay}
+                                    style={{
+                                        position: "absolute",
+                                        top: "50%",
+                                        left: "50%",
+                                        transform: "translate(-50%, -50%)",
+                                        fontSize: 50,
+                                        background: "rgba(0,0,0,0.5)",
+                                        borderRadius: "50%",
+                                        border: "none",
+                                        color: "white",
+                                        cursor: "pointer",
+                                    }}
+                                    aria-label="Play video"
+                                >
+                                    ▶️
+                                </button>
+                            )}
+                        </div>
+                    );
+                })}
+            </Slider>
         </div>
-    )
+    );
 }

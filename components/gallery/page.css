@@ -1,0 +1,9 @@
+.plyr--video .plyr__controls {
+    display: none !important;
+}
+
+.plyr--video .plyr__progress,
+.plyr--video .plyr__control,
+.plyr--video .plyr__menu {
+    display: none !important;
+}

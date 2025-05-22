@@ -1,0 +1,61 @@
+.teaching-section{
+    background-image: url('../../public/images/project-overview-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.teaching-section img {
+    width: 100%;
+    border-radius: 16px;
+    transition: 1s;
+}
+
+.teaching-section h4 {
+    color: white;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.teaching-section h4::after {
+    content: "";
+    width: 84%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.329);
+    display: block;
+    position: absolute;
+    left: 15%;
+    margin-left: 10px;
+}
+
+.carrer-advide-section,
+.product-sessions-section {
+    margin: 40px 0;
+}
+
+.product-sessions-section img {
+    height: 150px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.teaching-section a{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.teaching-section img:hover {
+    scale: 1.1;
+}
+
+.teaching-section h5 {
+    color: white;
+    margin: 10px 0;
+    padding: 0 5px;
+    text-align: left;
+    font-size: 14px;
+}
