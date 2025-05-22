@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.launch-by-alumni-section {
+    padding-left: 6% !important;
+    color: white;
+}
+
+.launch-by-alumni-section .card {
+    background-color: #0A1427;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    border: 1px solid #8f86fc;
+    width: 300px;
+    text-align: center;
+    height: 100%;
+    min-height: 300px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.launch-by-alumni-section .card::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #6154F3;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    filter: blur(12px);
+}
+
+.launch-by-alumni-section .card span {
+    text-align: left;
+    color: #69EACB;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.launch-by-alumni-section .card button {
+    font-size: 12px !important;
+}
+
+.launch-by-alumni-section .rfm-marquee-container{
+    padding: 40px 0;
+}

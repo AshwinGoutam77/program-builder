@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.alumni-section .card {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 260px;
+    height: 350px;
+    margin-left: 20px;
+}
+
+.alumni-section .card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.linkedin-img {
+    width: auto !important;
+    height: auto !important;
+}
+
+.alumni-section .card h4 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

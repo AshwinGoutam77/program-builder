@@ -1,79 +1,206 @@
 "use client"
+import { useEffect, useState } from "react"
+import './page.css'
+import Marquee from "react-fast-marquee";
 
-import { useState } from "react"
-import { ChevronRightIcon, XMarkIcon } from "@heroicons/react/24/outline"
+const students = [
+    {
+        name: 'Jitin Nagpal',
+        img: '/images/alumni-',
+        position: 'Founder @Liftbro',
+        linkedin: 'https://www.linkedin.com/in/nagpaljitin/',
+    },
+    {
+        name: 'Sanjeev Chadha',
+        img: '/images/alumni-',
+        position: 'SPM @Madison Logic',
+        linkedin: 'https://www.linkedin.com/in/sanjeev-chadha-76714b21/',
+    },
+    {
+        name: 'Sanchit Hegde',
+        img: '/images/alumni-',
+        position: 'SWE 2 at sap',
+        linkedin: 'https://www.linkedin.com/in/sanchithegde/',
+    },
+    {
+        name: 'Saif Sadiq',
+        img: '/images/alumni-',
+        position: 'Head of Product Growth @Apptile',
+        linkedin: 'https://www.linkedin.com/in/saif-sadiq/',
+    },
+    {
+        name: 'Yogish Gowda',
+        img: '/images/alumni-',
+        position: 'Senior Staff Product Owner @ Solarwinds',
+        linkedin: 'https://www.linkedin.com/in/yogishgowda/',
+    },
+    {
+        name: 'Gnanesh L',
+        img: '/images/alumni-',
+        position: 'Founder @ Tradebeat Innovations',
+        linkedin: 'https://www.linkedin.com/in/gnanesh5/',
+    },
+    {
+        name: 'Kaushik Samant',
+        img: '/images/alumni-',
+        position: 'Data Product Owner @ Nielsen IQ',
+        linkedin: 'https://www.linkedin.com/in/kaushik-samant/',
+    },
+    {
+        name: 'Satya Pandey',
+        img: '/images/alumni-',
+        position: 'Associate Product Owner @ Bank of America',
+        linkedin: 'https://www.linkedin.com/in/satya-pandey-b8448577/',
+    },
+    {
+        name: 'Deepshika Sharma',
+        img: '/images/alumni-',
+        position: 'Associate Product Manager @ IZotoo',
+        linkedin: 'https://www.linkedin.com/in/deepshikha-sharma-ba22a3169/',
+    },
+    {
+        name: 'Maanas Mohan',
+        img: '/images/alumni-',
+        position: 'Program Manager @ High Radius',
+        linkedin: 'https://www.linkedin.com/in/maanasmohan/',
+    },
+    {
+        name: 'Rahul Verma',
+        img: '/images/alumni-',
+        position: 'Program Manager @ Amazon',
+        linkedin: 'https://www.linkedin.com/in/rahulverma11/',
+    },
+    {
+        name: 'Rahul Verma',
+        img: '/images/alumni-',
+        position: 'Senior Product Manager @ Publicis Sapient',
+        linkedin: 'https://www.linkedin.com/in/rahulverma20/',
+    },
+    {
+        name: 'Tusshar Gupta',
+        img: '/images/alumni-',
+        position: 'Product Manager @Tata 1MG',
+        linkedin: 'https://www.linkedin.com/in/tusshar-gupta/',
+    },
+    {
+        name: 'Isha Singal',
+        img: '/images/alumni-',
+        position: 'Senior Program Manager @ Amazon',
+        linkedin: 'https://www.linkedin.com/in/isha-singal-6077b248/',
+    },
+    {
+        name: 'Dileep KS',
+        img: '/images/alumni-',
+        position: 'Product Manager @ FIS Global',
+        linkedin: 'https://www.linkedin.com/in/dileep-ks/',
+    },
+    {
+        name: 'Ridham Trivedi',
+        img: '/images/alumni-',
+        position: 'Associate UX Designer @ Jio',
+        linkedin: 'https://www.linkedin.com/in/ridham-trivedi-/',
+    },
+    {
+        name: 'Kiran Bandreddy',
+        img: '/images/alumni-',
+        position: 'Founder @ AIonDemand',
+        linkedin: 'https://www.linkedin.com/in/kiran-sai-bandreddy/',
+    },
+    {
+        name: 'Akash Raj',
+        img: '/images/alumni-',
+        position: 'Product Manager @ Flipkart',
+        linkedin: 'https://www.linkedin.com/in/akashraj4562/',
+    },
+    {
+        name: 'Arbaaz Shaikh',
+        img: '/images/alumni-',
+        position: 'Product Manager @ Bombay Design Centre',
+        linkedin: 'https://www.linkedin.com/in/arbaazshaikhh/',
+    },
+    {
+        name: 'Puneet Mandil',
+        img: '/images/alumni-',
+        position: 'Associate Consultant @ Mastercard',
+        linkedin: 'https://www.linkedin.com/in/puneet-mandil/',
+    },
+    {
+        name: 'Varun Khanna',
+        img: '/images/alumni-',
+        position: 'Global Product Lead @ Google',
+        linkedin: 'https://www.linkedin.com/in/khannavarun/',
+    },
 
-const caseStudies = [
     {
-        title: "Varun Khanna",
-        exp: "12+ Years of Exp",
-        summary:
-            "Product Lead @ Google",
-        image: "/images/alumini-1.jpeg",
-    },
-    {
-        title: "Dev Yadav",
-        exp: "10+ Years of Exp",
-        summary:
-            "Product Lead @Agthia Group",
-        image: "/images/alumini-2.jpeg",
-    },
-    {
-        title: "Shobhit Gupta",
-        exp: "4+ Years of Exp",
-        summary:
-            "SPM @ Service Now",
-        image: "/images/alumini-3.jpeg",
-    },
-    {
-        title: "Varun Khanna",
-        exp: "12+ Years of Exp",
-        summary:
-            "Product Lead @ Google",
-        image: "/images/alumini-1.jpeg",
+        name: 'Dev Yadav',
+        img: '/images/alumni-',
+        position: 'Product Lead @ Agthia Group',
+        linkedin: 'https://www.linkedin.com/in/devender-yadav/',
     },
 ]
 
 export default function Alumni() {
 
-    return (
-        <section className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden bg-gray-950">
-            <div className="container mx-auto relative z-10">
-                <div className="mx-auto text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                        Our Alumni
-                    </h2>
-                    <p className="text-xl w-[85%] m-auto text-gray-200">
-                        These exceptional students, thriving at leading companies who exemplify the highest standards of excellence, resilience, and leadership. Explore their profiles and get inspired by their journeys of growth, achievement, and impact
-                    </p>
-                </div>
+    const [play, setPlay] = useState(false);
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    {caseStudies.map((study, i) => (
-                        <div
-                            key={i}
-                            className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-violet-500/30 transition duration-300 group"
-                        >
-                            <div className="h-70 bg-gradient-to-br from-violet-900/30 to-teal-900/30 relative">
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <img
-                                        src={study.image}
-                                        alt={study.title}
-                                        className="max-h-full w-full object-cover"
-                                    />
-                                </div>
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setPlay(true);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        const elements = document.querySelectorAll(".slider--testim");
+        elements.forEach((element) => observer.observe(element));
+
+        return () => {
+            elements.forEach((element) => observer.unobserve(element));
+        };
+    }, []);
+
+    return (
+        <section className="alumni-section w-full text-white">
+            <div className="container mx-auto text-center">
+                <h2 className="mb-2">Our Alumni</h2>
+                <p>A network of builders- they continue to shape others’ paths by becoming 1% better everyday. Scroll <span className="block"> through, reach out, get inspired.</span></p>
+            </div>
+
+            <div className="mt-10">
+                <Marquee speed={50} delay={0} play={play} autoFill pauseOnHover direction="right">
+                    {students.slice(0, 12).map((student, index) => (
+                        <div className="card" key={index}>
+                            <img src={student.img + (index + 1) + '.png'} alt="student" />
+                            <div className="flex items-center justify-between mt-3">
+                                <h4>{student.name}</h4>
+                                <a href={student?.linkedin} target="_blank"><img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" /></a>
                             </div>
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-violet-400 transition">
-                                    {study.title}
-                                </h3>
-                                <p className="text-gray-300 text-sm mb-2">Built by {study.exp}</p>
-                                <p className="text-gray-200 mb-4">{study.summary}</p>
-                            </div>
+                            <p className="text-sm font-bold">{student?.position}</p>
                         </div>
                     ))}
-                </div>
+                </Marquee>
             </div>
+
+            <div className="mt-10">
+                <Marquee speed={50} delay={0} play={play} autoFill pauseOnHover>
+                    {students.slice(12, 24).map((student, index) => (
+                        <div className="card" key={index}>
+                            <img src={student.img + (12 + index + 1) + '.png'} alt="student" />
+                            <div className="flex items-center justify-between mt-3">
+                                <h4>{student.name}</h4>
+                                <a href={student?.linkedin} target="_blank"><img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" /></a>
+                            </div>
+                            <p className="text-sm font-bold">{student?.position}</p>
+                        </div>
+                    ))}
+                </Marquee>
+            </div>
+
         </section>
     )
 }

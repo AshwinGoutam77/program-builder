@@ -35,31 +35,35 @@ export default function VideoTestimonialSlider() {
     const testimonials = [
         {
             id: 1,
-            title: "Analytics & report",
-            description: "Amet minim mollit non deserunt ullamco",
-            image: "/images/guest-1.jpg",
+            title: "Jitin Nagpal",
+            description: "Founder at LifeBro",
+            image: "/images/students.png",
             videoUrl: "#",
+            exp: "19+ Years of Experience"
         },
         {
             id: 2,
-            title: "Analytics & report",
-            description: "Amet minim mollit non deserunt ullamco",
-            image: "/images/guest-2.jpg",
+            title: "Jitin Nagpal",
+            description: "Founder at LifeBro",
+            image: "/images/students.png",
             videoUrl: "#",
+            exp: "19+ Years of Experience"
         },
         {
             id: 3,
-            title: "Analytics & report",
-            description: "Amet minim mollit non deserunt ullamco",
-            image: "/images/guest-3.jpg",
+            title: "Jitin Nagpal",
+            description: "Founder at LifeBro",
+            image: "/images/students.png",
             videoUrl: "#",
+            exp: "19+ Years of Experience"
         },
         {
             id: 4,
-            title: "Analytics & report",
-            description: "Amet minim mollit non deserunt ullamco",
-            image: "/images/guest-4.jpg",
+            title: "Jitin Nagpal",
+            description: "Founder at LifeBro",
+            image: "/images/students.png",
             videoUrl: "#",
+            exp: "19+ Years of Experience"
         },
     ]
 
@@ -68,27 +72,23 @@ export default function VideoTestimonialSlider() {
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     {/* Left Content */}
-                    <div className="lg:col-span-3">
+                    <div className="lg:col-span-4">
                         <div className="space-y-6">
-                            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Exclusive Guest Sessions!</h2>
-                            <button
-                                className="primary-btn"
-                            >
-                                Apply Now <ChevronRightIcon className="ml-2 h-4 w-4" />
-                            </button>
+                            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Hear from our Students!</h2>
+                            <p>Real voices. Real journeys. Real impact. It’s stories from those who dared to do the work because the best proof is lived experience</p>
                         </div>
                     </div>
 
                     {/* Right Content - Testimonial Slider */}
-                    <div className="lg:col-span-9 relative">
+                    <div className="lg:col-span-8 relative">
                         <div className="overflow-hidden" ref={emblaRef}>
                             <div className="flex">
                                 {testimonials.map((testimonial) => (
                                     <div
                                         key={testimonial.id}
-                                        className="flex-[0_0_90%] sm:flex-[0_0_45%] md:flex-[0_0_30%] min-w-0 pl-4 first:pl-0"
+                                        className="pl-4 first:pl-0"
                                     >
-                                        <div className="bg-gray-900 h-100 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/30">
+                                        <div className="bg-gray-900 h-100 w-[300px] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/30">
                                             <div className="relative">
                                                 <div className="bg-[#0E8A7B] aspect-square">
                                                     <img
@@ -98,7 +98,7 @@ export default function VideoTestimonialSlider() {
                                                     />
                                                 </div>
                                                 <button
-                                                    className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 hover:opacity-100 transition-opacity"
+                                                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
                                                     aria-label="Play video"
                                                 >
                                                     <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
@@ -106,9 +106,12 @@ export default function VideoTestimonialSlider() {
                                                     </div>
                                                 </button>
                                             </div>
-                                            <div className="p-5">
-                                                <h3 className="font-semibold text-lg">{testimonial.title}</h3>
-                                                <p className="text-gray-400 text-sm mt-1">{testimonial.description}</p>
+                                            <div className="flex items-center justify-between p-5">
+                                                <div className="w-full">
+                                                    <h3 className="font-semibold text-lg">{testimonial.title}</h3>
+                                                    <p className="text-gray-400 text-sm mt-1">{testimonial.description}</p>
+                                                </div>
+                                                <p className="text-gray-400 text-sm text-end">{testimonial?.exp}</p>
                                             </div>
                                         </div>
                                     </div>

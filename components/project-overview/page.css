@@ -1,0 +1,44 @@
+.project-overview-section {
+    background-image: url('../../public/images/project-overview-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+
+.overview-tabs-section button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    /* margin-right: 10px; */
+    transition: .3s;
+}
+
+.overview-tabs-section button.active {
+    background-color: white;
+    color: black;
+}
+
+.important-section ul {
+    list-style: circle;
+    padding-left: 16px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.case-study-section {
+    padding: 80px 0 40px 0 !important;
+}
+
+
+.important-section {
+    color: white;
+    padding: 40px 0 80px 0;
+}

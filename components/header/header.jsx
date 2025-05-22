@@ -7,10 +7,6 @@ import {
     Disclosure,
     DisclosureButton,
     DisclosurePanel,
-    Popover,
-    PopoverButton,
-    PopoverGroup,
-    PopoverPanel,
 } from '@headlessui/react'
 import {
     ArrowPathIcon,
@@ -22,6 +18,7 @@ import {
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { motion } from 'framer-motion'
 
 const products = [
     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -39,7 +36,12 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="w-full text-white px-4 md:px-8 lg:px-16 overflow-hidden">
+        <motion.div
+            className="w-full text-white px-4 md:px-8 lg:px-16 overflow-hidden"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
             <header className="container mx-auto">
                 <nav aria-label="Global" className="flex items-center justify-between py-6">
                     <div className="flex lg:flex-1">
@@ -63,7 +65,7 @@ export default function Header() {
                         </button>
                     </div>
 
-                    <div className="hidden lg:flex  items-center lg:flex-1 lg:justify-end gap-5">
+                    <div className="hidden lg:flex items-center lg:flex-1 lg:justify-end gap-5">
                         <a href="#" className="text-sm/6 font-semibold text-white">
                             Features
                         </a>
@@ -161,6 +163,6 @@ export default function Header() {
                     </DialogPanel>
                 </Dialog>
             </header>
-        </div>
+        </motion.div>
     )
 }
