@@ -38,7 +38,7 @@ export default function Home() {
       <LaunchByAlumni />
       <Network />
       <Alumni />
-      <VideoSlider />
+      {/* <VideoSlider /> */}
       <Teaching />
       <FAQSection />
       <Footer />

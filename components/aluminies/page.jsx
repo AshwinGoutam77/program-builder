@@ -178,7 +178,7 @@ export default function Alumni() {
                             <img src={student.img + (index + 1) + '.png'} alt="student" />
                             <div className="flex items-center justify-between mt-3">
                                 <h4>{student.name}</h4>
-                                <img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" />
+                                <a href={student?.linkedin} target="_blank"><img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" /></a>
                             </div>
                             <p className="text-sm font-bold">{student?.position}</p>
                         </div>
@@ -193,7 +193,7 @@ export default function Alumni() {
                             <img src={student.img + (12 + index + 1) + '.png'} alt="student" />
                             <div className="flex items-center justify-between mt-3">
                                 <h4>{student.name}</h4>
-                                <img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" />
+                                <a href={student?.linkedin} target="_blank"><img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" /></a>
                             </div>
                             <p className="text-sm font-bold">{student?.position}</p>
                         </div>
