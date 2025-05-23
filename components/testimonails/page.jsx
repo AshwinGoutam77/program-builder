@@ -209,7 +209,7 @@ Your program gave way more value. ❤️`,
     }, []);
 
     return (
-        <section className="testimonials-slider-section w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
+        <section className="testimonials-slider-section w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden" id='testimonials'>
             <div className="">
 
                 <div className="container">

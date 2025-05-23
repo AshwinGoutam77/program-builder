@@ -254,7 +254,7 @@ const ProgramOverview = () => {
     ]
 
     return (
-        <section className="project-overview-section">
+        <section className="project-overview-section" id='project-overview'>
             <div className="container mx-auto">
                 <div className="mb-12 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-8">Program Overview</h2>

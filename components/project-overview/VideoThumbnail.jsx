@@ -15,17 +15,25 @@ const VideoThumbnail = () => {
             {/* Video Thumbnail */}
             <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out"
-                style={{
-                    backgroundImage: "url('https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg')",
-                    transform: isHovering ? 'scale(1.05)' : 'scale(1)'
-                }}
+            // style={{
+            //     backgroundImage: "url('https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg')",
+            //     transform: isHovering ? 'scale(1.05)' : 'scale(1)'
+            // }}
             />
 
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/30" />
+            {/* <div className="absolute inset-0 bg-black/30" /> */}
+            <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                src={"https://www.youtube.com/embed/cuH1EpGIkDo?si=jc1uDmoe-I4Xkesz"}
+                title="How does Shravan teach?"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+            ></iframe>
 
             {/* Play Button */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* <div className="absolute inset-0 flex items-center justify-center">
                 <div
                     className={`flex items-center justify-center w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 
             ${isHovering ? 'scale-110 bg-white/30' : 'scale-100'}`}
@@ -34,7 +42,7 @@ const VideoThumbnail = () => {
                         className={`transition-transform duration-300 stroke-white ${isHovering ? 'translate-x-0.5' : ''}`}
                     />
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

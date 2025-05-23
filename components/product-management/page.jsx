@@ -27,7 +27,7 @@ export default function ProductManagement() {
     const inView = useInView(ref, { once: true, margin: '-100px' });
 
     return (
-        <section ref={ref} className="project-management-section">
+        <section ref={ref} className="project-management-section" id='project-management'>
             <div className="container mx-auto">
                 <div className="mx-auto grid items-center max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
 
@@ -51,7 +51,7 @@ export default function ProductManagement() {
                                 ))}
                             </dl>
                             <a
-                                href="#"
+                                href="#curriculum-overview"
                                 className="text-base/7 mt-10 font-semibold text-[#C9C2FF] flex gap-2 items-center"
                             >
                                 Find more about the Structure of program{' '}

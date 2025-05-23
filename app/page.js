@@ -25,8 +25,8 @@ import SuperSpecial from "@/components/superSpecial/page";
 export default function Home() {
   return (
     <>
+      <Header />
       <section className="main-section">
-        <Header />
         <Banner />
         <ProductManagement />
         <ProgramTabsSection />

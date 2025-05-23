@@ -13,9 +13,9 @@ const LiveWithShravan = ({ data }) => {
                     ))}
                 </ul>
 
-                <button className="primary-btn">
-                    Download the program brochure <img src="/images/arrow.png" alt="arrow" />
-                </button>
+                <a href='#' className='text-white flex items-center gap-2'>
+                    Download the program brochure <img src="/images/light-arrow.png" alt="arrow" />
+                </a>
             </div>
 
             <div className="bg-white rounded-lg p-2 pt-10 relative">

@@ -381,10 +381,10 @@ export default function CourseCurriculum() {
     }
 
     return (
-        <div className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
+        <div className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden" id="curriculum-overview">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-10">
-                    <h1 className="text-4xl font-bold mb-2">What will you learn?</h1>
+                    <h2 className="mb-2">What will you learn?</h2>
                     <p className="text-sm text-gray-400">
                         Build real products, become a systems thinker and master the Product mindset <span className="block">-all with AI by your side.</span>
                     </p>

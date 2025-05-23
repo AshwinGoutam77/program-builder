@@ -57,7 +57,7 @@ export default function AboutUs() {
     const slide = slides[currentSlide]
 
     return (
-        <section>
+        <section id="about-section">
             <div className="relative container mx-auto">
                 <div className="relative overflow-hidden">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -120,12 +120,12 @@ export default function AboutUs() {
                                 <button className="primary-btn mr-4">
                                     APPLY NOW <img src="/images/arrow.png" alt="" />
                                 </button>
-                                <button
-                                    onClick={() => setShowModal(true)}
+                                <a
+                                    href="#sarvan-teaching"
                                     className="secondary-btn"
                                 >
                                     View Shravans’ Teaching videos
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>

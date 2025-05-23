@@ -56,7 +56,7 @@ export default function ProgramTabsSection() {
   const inView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section ref={ref} className='program-section'>
+    <section ref={ref} className='program-section' id='program-section'>
       <div className="container mx-auto">
         <div className="grid items-center grid-cols-1 gap-y-10 gap-x-0 lg:grid-cols-[40%_60%]">
 
