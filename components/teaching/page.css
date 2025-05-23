@@ -63,3 +63,13 @@
     margin-left: 10px;
 }
 }
+@media (min-width:922px) {
+    .product-sessions-section img {
+    height: 200px; 
+}
+}
+@media (max-width:768px) {
+    .product-sessions-section img {
+    height: 200px; 
+}
+}

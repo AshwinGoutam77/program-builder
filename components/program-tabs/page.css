@@ -96,3 +96,9 @@
         padding: 80px;
     }
 }
+
+@media (max-width:400px) {
+    .program-section .fliping-cards{
+        grid-template-columns: repeat(1,1fr)
+    }
+}

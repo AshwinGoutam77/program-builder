@@ -11,7 +11,7 @@ export default function Network() {
 
             <div className='network-banner'>
                 <div className="container m-auto text-center">
-                    <h2>Join a Network That <span className="block">Elevates You ❤️</span></h2>
+                    <h2>Join a Network That <span className="md:block">Elevates You ❤️</span></h2>
                     <a href='#' className='flex items-center justify-center gap-2'>Curated Community experience <img src="/images/light-arrow.png" alt="arrow" /></a>
                     <p>Program 5- Retreat (Chikmagalur)</p>
                 </div>

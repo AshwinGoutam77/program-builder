@@ -31,7 +31,7 @@ export default function Banner() {
                                 Become a successful product manager & builder in the Age of AI
                             </p>
 
-                            <p className="w-[80%] italic">
+                            <p className="md-w-[80%] italic">
                                 Step into the next generation of product leadership. In a world
                                 where AI is transforming how products are built, this program
                                 equips you with clarity of thought, first-principle frameworks,

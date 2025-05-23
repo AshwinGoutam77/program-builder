@@ -90,7 +90,7 @@
 
 @media (max-width: 501px) {
   .orbit-flip-container {
-     width: 95vh;
+     width: 95vw;
      aspect-ratio: 1/1;
      height: auto;
   }
