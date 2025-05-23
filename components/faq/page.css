@@ -1,7 +1,20 @@
 .faq-section .tabs{
-    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.faq-section .tabs button{
+.faq-section .tabs {
+    border-bottom: 1px solid #cccccc56;
+    margin-bottom: 50px;
+}
+
+.faq-section .tabs button {
     width: fit-content;
+    /* white-space: nowrap; */
+}
+
+@media (max-width:767) {
+    .faq-section .tabs {
+        overflow-x: scroll;
+    }
 }
