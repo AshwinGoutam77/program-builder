@@ -4,6 +4,7 @@ import { useState } from "react";
 import YouTubeModal from "./youtubeModal";
 import { motion } from "framer-motion";
 import "./page.css";
+import Counter from "../Counter/Counter";
 
 const slides = [
   {
@@ -63,8 +64,15 @@ export default function AboutUs() {
         <div className="relative overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             {/* Left Image */}
-            <div className="relative w-full">
-              <img
+            <motion.div className="relative w-full">
+              <motion.img
+                initial={{ opacity: 1, y: -40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                }}
                 src="../../images/about-img.png"
                 alt={slide.alt}
                 className="object-cover rounded-lg w-full"
@@ -72,41 +80,48 @@ export default function AboutUs() {
               <div className="metric-box">
                 <div>
                   <h4>
-                    100 <span>+</span>
+                    <Counter target={100} inView={true} /> <span>+</span>
                   </h4>
                   <p>Avg. growth</p>
                 </div>
                 <div>
                   <h4>
-                    450 <span>+</span>
+                    <Counter target={450} inView={true} /> <span>+</span>
                   </h4>
                   <p>Projects</p>
                 </div>
                 <div>
                   <h4>
-                    10K <span>+</span>
+                    <Counter target={10} inView={true} />K <span>+</span>
                   </h4>
                   <p>Happy investors</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Right Content */}
             <div className="flex flex-col justify-center">
-              <h2
-                className="sarvan-heading text-white mb-4 text-gray-900 animate-fade-in"
-                style={{ animationDelay: "0.2s" }}
+              <motion.h2
+                className="sarvan-heading text-white mb-4 text-gray-900"
+                initial={{ opacity: 0, y: -40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                  delay: 0,
+                }}
               >
                 {slide.title}
                 <span className="block gradient">{slide.subtitle}</span>
-              </h2>
+              </motion.h2>
 
-              <motion.ul>
+              <ul>
                 {slide?.list?.map((item, index) => (
                   <motion.li
-                    initial={{ opacity: 0, y: -30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
                     transition={{
                       duration: 0.8,
                       delay: index * 0.2,
@@ -123,10 +138,18 @@ export default function AboutUs() {
                     <span dangerouslySetInnerHTML={{ __html: item }} />
                   </motion.li>
                 ))}
-              </motion.ul>
+              </ul>
               <div className="flex gap-1 justify-start pl-7 pb-5">
                 {slides.map((_, index) => (
-                  <button
+                  <motion.button
+                    initial={{ opacity: 0, y: -40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{
+                      duration: 0.5,
+                      ease: "easeOut",
+                      delay:index*.2 
+                    }}
                     key={index}
                     onClick={() => goToSlide(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
