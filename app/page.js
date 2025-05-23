@@ -25,13 +25,13 @@ import SuperSpecial from "@/components/superSpecial/page";
 export default function Home() {
   return (
     <>
-      <div className="main-section">
+      <section className="main-section">
         <Header />
         <Banner />
         <ProductManagement />
         <ProgramTabsSection />
         <AboutUs />
-      </div>
+      </section>
       <ProjectOverview />
       <Testimonials />
       <VideoTestimonialSlider />

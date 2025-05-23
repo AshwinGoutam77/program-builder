@@ -211,35 +211,41 @@ Your program gave way more value. ❤️`,
     return (
         <section className="testimonials-slider-section w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
             <div className="">
-                <div>
-                    <h2 className="m-auto text-center">
-                        What Students Think <span className="block">about us?</span>
-                    </h2>
 
-                    <div className="buttons text-center">
-                        <button
-                            className={Comments === true ? "active" : ""}
-                            onClick={() => setComments(true)}
-                        >
-                            Jobs Cracked {Comments === true && <img src="/images/white-arrow.png" alt="job" />}
-                        </button>
+                <div className="container">
+                    <div>
+                        <h2 className="m-auto text-center">
+                            What Students Think <span className="block">about us?</span>
+                        </h2>
 
-                        <button
-                            className={Comments === false ? "active" : ""}
-                            onClick={() => setComments(false)}
-                        >
-                            Lovely Comments {Comments === false && <img src="/images/white-arrow.png" alt="job" />}
-                        </button>
+                        <div className="buttons text-center">
+                            <button
+                                className={Comments === true ? "active" : ""}
+                                onClick={() => setComments(true)}
+                            >
+                                Jobs Cracked {Comments === true && <img src="/images/white-arrow.png" alt="job" />}
+                            </button>
+
+                            <button
+                                className={Comments === false ? "active" : ""}
+                                onClick={() => setComments(false)}
+                            >
+                                Lovely Comments {Comments === false && <img src="/images/white-arrow.png" alt="job" />}
+                            </button>
+                        </div>
+
+
                     </div>
-
-
                 </div>
 
                 <div
                     className="slider--testim mt-10"
                 >
+                    <div className="text-end pr-10 mb-5">
+                        {Comments && <a href="https://drive.google.com/drive/folders/1bcPqmxKI5VywUSyen3Bw9tFjs47gttT_" target="_blank" className="flex items-center gap-2 justify-end">View All Offers <img src="/images/light-arrow.png" alt="arrow" /></a>}
+                    </div>
                     <Marquee speed={100} delay={3} play={play} autoFill pauseOnHover className="">
-                        {(Comments ? TestimonialData : TestimonialData2)?.map((item, index) => {
+                        {(!Comments ? TestimonialData : TestimonialData2)?.map((item, index) => {
                             return (
                                 <div className="item" key={index}>
                                     <div className="card">

@@ -23,8 +23,12 @@
     font-weight: 300;
 }
 
-@media (max-width:767px){
-    .metric-box h4{
+.sarvan-heading span{
+    font-size: clamp(1rem, 0.7685rem + 1.2346vw, 2.25rem) !important;
+}
+
+@media (max-width:767px) {
+    .metric-box h4 {
         font-size: 24px;
     }
 
