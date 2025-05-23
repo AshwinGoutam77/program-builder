@@ -81,7 +81,7 @@ export default function Header() {
 
     return (
         <motion.div
-            className={`${Scroll && 'header-scrolled '} header-section w-full text-white px-4 md:px-8 lg:px-16 overflow-hidden`}
+            className={`${Scroll && 'header-scrolled '} header-section w-full text-white overflow-hidden`}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -89,7 +89,7 @@ export default function Header() {
             <header className="container mx-auto">
                 <nav aria-label="Global" className="flex items-center justify-between py-6">
                     <div className="flex lg:flex-1">
-                        <a href="#" className="-m-1.5 p-1.5">
+                        <a href="#" className="">
                             <img src="/images/header-logo.png" alt="logo" />
                         </a>
                     </div>
