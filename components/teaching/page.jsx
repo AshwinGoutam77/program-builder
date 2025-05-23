@@ -33,7 +33,7 @@ export default function Teaching() {
                     <div className="product-sessions-section">
                         <h4>Product Sessions</h4>
 
-                        <div className="grid grid-cols-4 gap-10">
+                        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
                             <div onClick={() => {
                                 setShowModal(true);
                                 setVideoLink('https://www.youtube.com/embed/Ljchh5jsEFc?si=tg6JVuR7o6Q7ygHf');

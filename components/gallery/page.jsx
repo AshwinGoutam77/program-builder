@@ -35,34 +35,23 @@ export default function VideoSlider() {
         slidesToShow: 1.5,
         speed: 500,
         nav: false,
-        dots: 'true',
         prevArrow: <CustomPrevArrow />,
         nextArrow: <CustomNextArrow />,
+        responsive: [
+            {
+                breakpoint: 568,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1.2,
+                },
+            },
+        ],
     };
-
-  const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 1.5,
-    speed: 500,
-    nav: false,
-    responsive: [
-      {
-        breakpoint: 568,
-        settings: {
-          slidesToShow: 1, 
-        },
-      }, 
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1.2, 
-        },
-      }, 
-    ],
-  };
 
     return (
         <section className="video-slider-section text-center">
