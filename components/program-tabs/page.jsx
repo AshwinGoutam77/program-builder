@@ -11,7 +11,7 @@ const tabs = [
   },
   {
     id: '2',
-    label: 'Product Leaders, Managers & Associates',
+    label: 'Product Managers & Leaders',
     desc: 'Elevate from backlog managers to drive company-wide AI adoption and scalable roadmaps.',
   },
   {
@@ -21,7 +21,7 @@ const tabs = [
   },
   {
     id: '4',
-    label: 'Engineering Leads, Managers & Associates',
+    label: 'Engineering Managers & Leaders',
     desc: 'Bridge product vision with AI-driven system design.',
   },
   {
@@ -58,7 +58,7 @@ export default function ProgramTabsSection() {
   return (
     <section ref={ref} className='program-section'>
       <div className="container mx-auto">
-        <div className="grid items-center grid-cols-1 gap-y-5 gap-x-0 lg:grid-cols-[40%_60%]">
+        <div className="grid items-center grid-cols-1 gap-y-10 gap-x-0 lg:grid-cols-[40%_60%]">
 
           {/* Left side: slide in from left */}
           <motion.div
@@ -66,39 +66,41 @@ export default function ProgramTabsSection() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            <h2>Who is this Program for?</h2>
+            <h2>Who is this <span className="block">Program for?</span></h2>
             <ul className='my-8'>
               <li><img src="/images/right-click.png" alt="icon" /><span>Aim to be top <span className="font-bold">1% operator</span></span></li>
               <li><img src="/images/right-click.png" alt="icon" /><span>Deliver <span className="font-bold">10x value</span> before chasing titles</span></li>
               <li><img src="/images/right-click.png" alt="icon" /><span>Dedicate <span className="font-bold">15-20 hrs</span> every week</span></li>
             </ul>
             <button className="primary-btn">
-              Try For Free <img src="/images/arrow.png" alt="icon" />
+              Apply Now <img src="/images/arrow.png" alt="icon" />
             </button>
           </motion.div>
 
           {/* Right side: cards staggered coming from right */}
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10'
-          >
-            {tabs.map((item, index) => (
-              <motion.div
-                key={item.id}
-                variants={cardVariants}
-                className="card"
-              >
-                <div className="front">
-                  <p>{item.label}</p>
-                </div>
-                <div className="back">
-                  <p>{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+          <div className="w-full max-w-screen-lg mx-auto px-4">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+              className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10"
+            >
+              {tabs.map((item, index) => (
+                <motion.div
+                  key={item.id}
+                  variants={cardVariants}
+                  className="card"
+                >
+                  <div className="front">
+                    <p>{item.label}</p>
+                  </div>
+                  <div className="back">
+                    <p>{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
 
         </div>
       </div>

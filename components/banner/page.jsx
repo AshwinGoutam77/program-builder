@@ -15,20 +15,23 @@ export default function Banner() {
                 <div className="banner-section container mx-auto">
                     <div className="grid grid-cols-1 gap-y-12 gap-x-8 lg:grid-cols-[60%_40%] z-20 relative">
                         <div className="flex flex-col justify-center gap-5">
-                            <motion.h1
-                                initial={{ opacity: 0, y: -50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                                className="text-4xl font-bold"
-                            >
-                                Mastering <span className="block">Product Management 2.0</span>
-                            </motion.h1>
+                            <div>
+                                <span className="gradient">PROGRAM 6TH </span>
+                                <motion.h1
+                                    initial={{ opacity: 0, y: -50 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                                    className="text-4xl font-bold"
+                                >
+                                    Mastering <span className="block">Product Management 2.0</span>
+                                </motion.h1>
+                            </div>
 
                             <p className="font-bold">
                                 Become a successful product manager & builder in the Age of AI
                             </p>
 
-                            <p className="w-[80%]">
+                            <p className="w-[80%] italic">
                                 Step into the next generation of product leadership. In a world
                                 where AI is transforming how products are built, this program
                                 equips you with clarity of thought, first-principle frameworks,
@@ -36,9 +39,9 @@ export default function Banner() {
                                 faster, think like a founder, and future-proof your career.
                             </p>
 
-                            <div className="flex gap-5">
+                            <div className="flex flex-wrap gap-5">
                                 <button className="primary-btn">
-                                    Try For Free <ChevronRightIcon />
+                                    Apply Now <img src="/images/arrow.png" alt="" />
                                 </button>
                                 <button className="secondary-btn">View Program Curriculum</button>
                             </div>
@@ -60,12 +63,12 @@ export default function Banner() {
                     </div>
                 </div>
 
-                <section className="py-10 sm:py-16 lg:py-24">
+                <section className="logos-cloud-section ">
                     <div className="container mx-auto">
                         <div className="max-w-2xl mx-auto text-center">
-                            <h2 className="text-md gradient">
+                            <span className="gradient">
                                 Our alumni are building world class products at
-                            </h2>
+                            </span>
                         </div>
 
                         <motion.div

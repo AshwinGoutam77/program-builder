@@ -29,7 +29,7 @@
 .program-section .card>div {
     width: 100%;
     height: 100%;
-    padding: 60px;
+    padding: 60px 20px;
     /* padding moved here */
     color: white;
     font-size: 16px;
@@ -66,6 +66,10 @@
     padding: 10px;
 }
 
+.program-section .card .back p{
+    color: #09172b;
+}
+
 .program-section .card:hover .front {
     transform: rotateY(180deg);
 }
@@ -85,4 +89,10 @@
     top: -10px;
     left: -10px;
     filter: blur(12px);
+}
+
+@media(max-width:767px){
+    .program-section .card{
+        padding: 80px;
+    }
 }

@@ -2,7 +2,7 @@
 
 const TabNavigation = ({ tabs, activeTab, setActiveTab }) => {
     return (
-        <div className="overview-tabs-section flex flex-wrap justify-center items-center gap-2 md:gap-4">
+        <div className="overview-tabs-section flex justify-center items-center gap-2 md:gap-4">
             {tabs.map((tab) => (
                 <button
                     key={tab}

@@ -1,6 +1,6 @@
 .banner-section {
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 80px !important;
 }
 
 .banner-section h1 {
@@ -57,4 +57,10 @@
 .overlap-div-1 p,
 .overlap-div-2 p {
     font-size: 14px;
+}
+
+@media(max-width:767px) {
+    .logos-cloud-section {
+        display: none;
+    }
 }

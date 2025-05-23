@@ -22,3 +22,13 @@
     color: white;
     font-weight: 300;
 }
+
+@media (max-width:767px){
+    .metric-box h4{
+        font-size: 24px;
+    }
+
+    .metric-box h4 span {
+        font-size: 24px;
+    }
+}

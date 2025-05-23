@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/24/outline'
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import './page.css'
 
 const tabs = [
     { name: 'General Queries', key: 'GeneralInquiries' },
@@ -200,12 +201,12 @@ export default function FAQSection() {
     }
 
     return (
-        <section className="text-white">
+        <section className="faq-section text-white">
             <div className="container mx-auto">
                 <h2 className="text-center text-3xl font-semibold mb-8">FAQs</h2>
 
                 {/* Tabs */}
-                <div className="flex justify-center mb-6 gap-5">
+                <div className="tabs flex justify-center mb-6 gap-5">
                     {tabs.map((tab) => (
                         <button
                             key={tab.key}

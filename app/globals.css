@@ -25,16 +25,20 @@ body {
   color: var(--foreground);
 }
 
-h1{
-  font-size: 3rem !important;
-  line-height: 55px !important;
+h1 {
+  font-size: clamp(2rem, 1.6296rem + 1.9753vw, 3rem) !important;
+  line-height: 65px !important;
 }
 
 h2 {
-  font-size: 38px !important;
+  font-size: clamp(1.75rem, 1.588rem + 0.8642vw, 2.625rem) !important;
   font-weight: 600 !important;
-  line-height: normal;
+  line-height: normal !important;
   color: white;
+}
+
+p {
+  font-size: clamp(0.875rem, 0.8519rem + 0.1235vw, 1rem) !important;
 }
 
 section {
@@ -50,11 +54,9 @@ section {
 
 .gradient {
   font-weight: bold;
-  background: linear-gradient(
-    90deg,
-    hsla(255, 92%, 76%, 1) 0%,
-    hsla(172, 66%, 50%, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      hsla(255, 92%, 76%, 1) 0%,
+      hsla(172, 66%, 50%, 1) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -118,5 +120,12 @@ header .primary-btn {
   .container {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
+  }
+}
+
+@media(max-width:767px) {
+  section {
+    padding: 20px 0 !important;
+    margin: 20px 0 !important;
   }
 }

@@ -276,9 +276,9 @@ const ProgramOverview = () => {
                 </div>
 
 
-                <div className="important-section grid grid-cols-2 items-center gap-10">
+                <div className="important-section grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
                     <div className="">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
                             {[
                                 {
                                     value: <>28<sup>th</sup> June</>,
@@ -301,7 +301,7 @@ const ProgramOverview = () => {
                                     key={idx}
                                     className="bg-white rounded-xl px-6 py-8 shadow-md"
                                 >
-                                    <h3 className="text-4xl font-bold text-indigo-600 mb-2">{item.value}</h3>
+                                    <h3 className="text-xl lg:text-4xl font-bold text-indigo-600 mb-2">{item.value}</h3>
                                     <p className="text-sm text-black">{item.label}</p>
                                 </div>
                             ))}

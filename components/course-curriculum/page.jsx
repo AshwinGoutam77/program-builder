@@ -13,7 +13,7 @@ const curriculumData = [
                 key: "live",
                 label: "Live Theory Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
                         <img src="../../images/week-1.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">
@@ -34,7 +34,7 @@ const curriculumData = [
                 key: "assignments",
                 label: "Live Lab Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-1-2.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">
@@ -61,7 +61,7 @@ const curriculumData = [
                 key: "live",
                 label: "Live Theory Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-2.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">
@@ -82,7 +82,7 @@ const curriculumData = [
                 key: "assignments",
                 label: "Live Lab Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-1-2.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">
@@ -108,7 +108,7 @@ const curriculumData = [
                 key: "live",
                 label: "Live Theory Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-3.png" alt="img" className="rounded" />
                         <div>
                             <ul>
@@ -125,7 +125,7 @@ const curriculumData = [
                 key: "assignments",
                 label: "Live Lab Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-3-2.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">
@@ -151,7 +151,7 @@ const curriculumData = [
                 key: "live",
                 label: "Live Theory Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-4.png" alt="img" className="rounded" />
                         <div>
                             <ul>
@@ -168,7 +168,7 @@ const curriculumData = [
                 key: "assignments",
                 label: "Live Lab Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-3-2.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">
@@ -194,7 +194,7 @@ const curriculumData = [
                 key: "live",
                 label: "Live Theory Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-5.png" alt="img" className="rounded" />
                         <div>
                             <ul>
@@ -211,7 +211,7 @@ const curriculumData = [
                 key: "assignments",
                 label: "Live Lab Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-1-2.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">
@@ -237,7 +237,7 @@ const curriculumData = [
                 key: "live",
                 label: "Live Theory Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-6.png" alt="img" className="rounded" />
                         <div>
                             <ul>
@@ -255,7 +255,7 @@ const curriculumData = [
                 key: "assignments",
                 label: "Live Lab Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-6-2.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">
@@ -281,7 +281,7 @@ const curriculumData = [
                 key: "live",
                 label: "Live Theory Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-7.png" alt="img" className="rounded" />
                         <div>
                             <ul>
@@ -298,7 +298,7 @@ const curriculumData = [
                 key: "assignments",
                 label: "Live Lab Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-7-2.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">
@@ -324,7 +324,7 @@ const curriculumData = [
                 key: "live",
                 label: "Live Theory Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-2.png" alt="img" className="rounded" />
                         <div>
                             <ul>
@@ -341,7 +341,7 @@ const curriculumData = [
                 key: "assignments",
                 label: "Live Lab Session",
                 content: (
-                    <div className="grid grid-cols-2 items-center gap-6">
+                    <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
                         <img src="../../images/week-6-2.png" alt="img" className="rounded" />
                         <div>
                             <div className="flex gap-2">

@@ -90,7 +90,7 @@ export default function AboutUs() {
                     style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                     {slides.map((slide) => (
-                        <div key={slide.id} className="min-w-full h-full flex flex-col md:flex-row">
+                        <div key={slide.id} className="min-w-full h-full flex flex-col md:flex-row gap-10">
                             <div className="w-full md:w-1/2 relative">
                                 <img
                                     src="../../images/about-img.png"
@@ -113,7 +113,7 @@ export default function AboutUs() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-full md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
+                            <div className="flex flex-col justify-center">
                                 {/* <div className="flex items-center mb-4 animate-fade-in" style={{ animationDelay: "0.1s" }}>
                                     <div className="w-6 h-0.5 bg-blue-600 mr-2"></div>
                                     <span className="gradient">{slide.subtitle}</span>
@@ -134,7 +134,7 @@ export default function AboutUs() {
                                         </li>
                                     ))}
                                 </ul>
-                                <div className="flex items-center mt-4">
+                                <div className="flex flex-wrap gap-5 items-center mt-4">
                                     <button
                                         className="primary-btn mr-4"
                                     >

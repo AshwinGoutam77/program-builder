@@ -1,0 +1,7 @@
+.faq-section .tabs{
+    overflow-x: scroll;
+}
+
+.faq-section .tabs button{
+    width: fit-content;
+}

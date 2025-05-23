@@ -1,5 +1,6 @@
 .project-management-section {
     margin-bottom: 100px !important;
+    overflow: hidden;
 }
 
 .pm-cards {
@@ -38,7 +39,7 @@
     top: 50px;
     left: 250px;
     width: 341px;
-    height: 366px;
+    height: 380px;
     perspective: 1000px;
     background-color: #09172b;
     border: 1px solid #8f86fc;
@@ -100,12 +101,12 @@
 
 .pm-cards .card-front img {
     /* max-width: 60px; */
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
 }
 
 .pm-cards h4 {
     color: #213da0;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     line-height: normal;
 }
@@ -137,11 +138,22 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.pm-cards .primary-btn{
+.pm-cards .primary-btn {
     border: 1px solid #ccc;
 }
 
 .read-now-btn:hover {
     background-color: #0056b3;
     color: white;
+}
+
+@media (max-width:767px) {
+    .pm-cards {
+        margin: auto;
+    }
+
+    .pm-cards .card:nth-child(2) {
+        position: relative;
+        left: 0;
+    }
 }
