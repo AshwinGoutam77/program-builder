@@ -65,7 +65,6 @@
 }
 
 .orbit-front {
-
     border: 1px solid #cccccc9d;
     background: transparent;
 }
@@ -77,8 +76,8 @@
 }
 
 
-.super-special-section .orbit-div h3 {
-    font-size: 42px;
+.super-special-section .orbit-front h3 {
+    font-size: clamp(1rem, 0.8148rem + 0.9877vw, 2rem);
     font-weight: 500;
     font-style: italic;
     margin: 0;

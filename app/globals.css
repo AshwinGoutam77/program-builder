@@ -50,6 +50,8 @@ section {
   background-image: url("../public/images/home-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .gradient {
