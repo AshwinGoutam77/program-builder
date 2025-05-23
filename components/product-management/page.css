@@ -23,7 +23,7 @@
   position: relative;
   z-index: 1;
   width: 341px;
-  height: 380px;
+  height: 400px;
   perspective: 1000px;
   background-color: #09172b;
   border: 1px solid #8f86fc;
@@ -31,7 +31,7 @@
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
   cursor: pointer;
-  padding: 20px;
+  padding: 30px;
 }
 
 .pm-cards .card:nth-child(2) {
@@ -48,7 +48,7 @@
   border-bottom-left-radius: 0;
   cursor: pointer;
   z-index: 2;
-  padding: 20px;
+  padding: 30px;
 }
 
 .pm-cards .card-inner {
@@ -83,9 +83,8 @@
 .pm-cards .card-front {
   z-index: 2;
   border: 1px solid #8f86fc;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 0;
   background-color: white;
+  border-radius: 8px;
   color: #000;
 }
 
@@ -147,9 +146,15 @@
   color: white;
 }
 
-@media (max-width:1024px) {
-  .pm-cards .card:nth-child(2){
-    left: 100px;
+@media (max-width:1200px) {
+  .pm-cards .card:nth-child(2) {
+    left: 150px;
+  }
+}
+
+@media (max-width:1020px) {
+  .pm-cards .card:nth-child(2) {
+    left: 260px;
   }
 }
 

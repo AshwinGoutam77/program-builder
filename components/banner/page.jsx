@@ -47,7 +47,7 @@ export default function Banner() {
                             </div>
                         </div>
 
-                        <div className="relative">
+                        <div className="relative w-fit mx-auto">
                             <div className="overlap-div-1 backdrop-blur-lg">
                                 <h4>10K</h4>
                                 <p>

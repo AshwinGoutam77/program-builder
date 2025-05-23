@@ -90,7 +90,7 @@ export default function Header() {
                 <nav aria-label="Global" className="flex items-center justify-between py-6">
                     <div className="flex lg:flex-1">
                         <a href="#" className="-m-1.5 p-1.5">
-                            <p className='logo'>Rethink Systems</p>
+                            <img src="/images/header-logo.png" alt="logo" />
                         </a>
                     </div>
                     <div className="flex lg:hidden">
@@ -105,6 +105,10 @@ export default function Header() {
                     </div>
 
                     <div className='header-menus flex gap-10'>
+
+                    </div>
+
+                    <div className="hidden lg:flex items-center lg:flex-1 lg:justify-end gap-5">
                         <a href="#about-us" className="text-sm/6 font-semibold text-white">
                             About Us
                         </a>
@@ -117,9 +121,6 @@ export default function Header() {
                         <a href="#sarvan-teaching" className="text-sm/6 font-semibold text-white">
                             Shravan Teaches
                         </a>
-                    </div>
-
-                    <div className="hidden lg:flex items-center lg:flex-1 lg:justify-end gap-5">
                         <a href="#" className="primary-btn">
                             Contact Us
                         </a>

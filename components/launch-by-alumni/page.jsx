@@ -112,7 +112,7 @@ export default function LaunchByAlumni() {
                                                 <span className="product-by">{item?.productBy}</span>
                                                 <img src={item?.image} alt="alumni-icon" width='100px' />
                                                 <p className="text-sm">{item?.desc}</p>
-                                                <a href={item?.link}><button className="primary-btn">View Product <img src="/images/arrow.png" alt="btn" /></button></a>
+                                                <a href={item?.link} target="_blank"><button className="primary-btn">View Product <img src="/images/arrow.png" alt="btn" /></button></a>
                                             </div>
                                         )
                                     })}
@@ -124,4 +124,4 @@ export default function LaunchByAlumni() {
             </div>
         </motion.section>
     )
-}
+} 

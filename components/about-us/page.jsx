@@ -80,19 +80,19 @@ export default function AboutUs() {
                             <div className="metric-box">
                                 <div>
                                     <h4>
-                                        <Counter target={100} inView={true} /> <span>+</span>
+                                        <Counter target={174} inView={true} />k <span>+</span>
                                     </h4>
                                     <p>Avg. growth</p>
                                 </div>
                                 <div>
                                     <h4>
-                                        <Counter target={450} inView={true} /> <span>+</span>
+                                        <Counter target={45} inView={true} />k <span>+</span>
                                     </h4>
                                     <p>Projects</p>
                                 </div>
                                 <div>
                                     <h4>
-                                        <Counter target={10} inView={true} />K <span>+</span>
+                                        <Counter target={10} inView={true} /> <span>+</span>
                                     </h4>
                                     <p>Happy investors</p>
                                 </div>
