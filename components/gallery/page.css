@@ -37,3 +37,20 @@
 .video-slider-section .slick-slide.slick-center {
     opacity: 1;
 }
+
+
+@media (max-width:767px) {
+
+    .video-slider-section .slick-slider .slick-track,
+    .slick-slider .slick-list {
+        padding-left: 0%;
+    }
+
+    .video-slider-section img,
+    .video-slider-section video {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}

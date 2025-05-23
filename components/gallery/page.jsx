@@ -47,7 +47,7 @@ export default function VideoSlider() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1.2,
+                    slidesToShow: 1,
                 },
             },
         ],

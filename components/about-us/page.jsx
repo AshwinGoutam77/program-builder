@@ -153,8 +153,8 @@ export default function AboutUs() {
                                         key={index}
                                         onClick={() => goToSlide(index)}
                                         className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSlide === index
-                                                ? "bg-blue-600 w-6"
-                                                : "bg-gray-400 hover:bg-gray-600"
+                                            ? "bg-blue-600 w-6"
+                                            : "bg-gray-400 hover:bg-gray-600"
                                             }`}
                                         aria-label={`Go to slide ${index + 1}`}
                                     />
@@ -165,12 +165,12 @@ export default function AboutUs() {
                                 <button className="primary-btn mr-4">
                                     APPLY NOW <img src="/images/arrow.png" alt="" />
                                 </button>
-                                <button
-                                    onClick={() => setShowModal(true)}
+                                <a
+                                    href='#sarvan-teaching'
                                     className="secondary-btn"
                                 >
                                     View Shravans’ Teaching videos
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
