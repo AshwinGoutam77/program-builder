@@ -162,7 +162,7 @@ export default function AboutUs() {
                             </div>
 
                             <div className="flex flex-wrap gap-5 items-center mt-4">
-                                <button className="primary-btn mr-4">
+                                <button className="primary-btn">
                                     APPLY NOW <img src="/images/arrow.png" alt="" />
                                 </button>
                                 <a

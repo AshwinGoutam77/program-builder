@@ -5,33 +5,44 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid"
 import { PlayCircleIcon, PlayIcon } from "@heroicons/react/24/outline"
 import "./page.css"
 export default function VideoTestimonialSlider() {
+    const AUTOPLAY_INTERVAL = 3000;
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: "start",
         skipSnaps: false,
-    })
+    });
 
-    const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
-    const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
-    const [selectedIndex, setSelectedIndex] = useState(0)
+    const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
+    const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
+    const [selectedIndex, setSelectedIndex] = useState(0);
 
-    const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi])
-    const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi])
+    const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+    const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
     const onSelect = useCallback(() => {
-        if (!emblaApi) return
-        setSelectedIndex(emblaApi.selectedScrollSnap())
-        setPrevBtnEnabled(emblaApi.canScrollPrev())
-        setNextBtnEnabled(emblaApi.canScrollNext())
-    }, [emblaApi])
+        if (!emblaApi) return;
+        setSelectedIndex(emblaApi.selectedScrollSnap());
+        setPrevBtnEnabled(emblaApi.canScrollPrev());
+        setNextBtnEnabled(emblaApi.canScrollNext());
+    }, [emblaApi]);
 
     useEffect(() => {
-        if (!emblaApi) return
-        onSelect()
-        emblaApi.on("select", onSelect)
-        emblaApi.on("reInit", onSelect)
-    }, [emblaApi, onSelect])
+        if (!emblaApi) return;
+        onSelect();
+        emblaApi.on("select", onSelect);
+        emblaApi.on("reInit", onSelect);
+    }, [emblaApi, onSelect]);
 
+    // ✅ Auto-play Effect
+    useEffect(() => {
+        if (!emblaApi) return;
+
+        const interval = setInterval(() => {
+            emblaApi.scrollNext();
+        }, AUTOPLAY_INTERVAL);
+
+        return () => clearInterval(interval); // Clear on unmount or emblaApi change
+    }, [emblaApi]);
     const testimonials = [
         {
             id: 1,
@@ -86,7 +97,7 @@ export default function VideoTestimonialSlider() {
                                 {testimonials.map((testimonial) => (
                                     <div
                                         key={testimonial.id}
-                                        className="pl-4 first:pl-0"
+                                        className="pl-4"
                                     >
                                         <div className="bg-gray-900 h-100  w-[300px] testimonial-card shrink-0 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/30">
                                             <div className="relative">

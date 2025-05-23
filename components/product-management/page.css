@@ -156,6 +156,10 @@
     position: relative;
     left: 0;
   }
+  .project-management-section{
+    padding-bottom: 65px !important;
+    margin-bottom: 0 !important;
+  }
 }
 
 @media (max-width: 350px) {

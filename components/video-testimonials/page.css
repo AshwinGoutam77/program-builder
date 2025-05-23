@@ -1,3 +1,7 @@
+.testimonial-card{
+    /* margin-left: calc(var(--spacing) * 4); */
+}
+
 .writing-vertical-lr {
     writing-mode: vertical-lr;
     text-orientation: upright;
