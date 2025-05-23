@@ -153,7 +153,7 @@ export default function AboutUs() {
                                         key={index}
                                         onClick={() => goToSlide(index)}
                                         className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${currentSlide === index
-                                            ? "bg-[#8980ed] w-6"
+                                            ? "bg-[#FFBDFE] w-6"
                                             : "bg-[#ffff] hover:bg-gray-600"
                                             }`}
                                         aria-label={`Go to slide ${index + 1}`}
