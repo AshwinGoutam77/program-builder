@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+.teaching-section div{
+    cursor: pointer;
+}
+
 .teaching-section h4 {
     color: white;
     text-align: left;
