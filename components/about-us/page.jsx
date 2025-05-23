@@ -119,7 +119,7 @@ export default function AboutUs() {
               <ul>
                 {slide?.list?.map((item, index) => (
                   <motion.li
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.5 }}
                     transition={{
@@ -141,15 +141,7 @@ export default function AboutUs() {
               </ul>
               <div className="flex gap-1 justify-start pl-7 pb-5">
                 {slides.map((_, index) => (
-                  <motion.button
-                    initial={{ opacity: 0, y: -40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.1 }}
-                    transition={{
-                      duration: 0.5,
-                      ease: "easeOut",
-                      delay:index*.2 
-                    }}
+                  <motion.button 
                     key={index}
                     onClick={() => goToSlide(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
@@ -162,7 +154,15 @@ export default function AboutUs() {
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-5 items-center mt-4">
+              <motion.div className="flex flex-wrap gap-5 items-center mt-4"
+               initial={{ opacity: 0, y: -40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{
+                      duration: 0.5,
+                      ease: "easeOut", 
+                      delay:.2
+                    }}>
                 <button className="primary-btn mr-4">
                   APPLY NOW <img src="/images/arrow.png" alt="" />
                 </button>
@@ -172,7 +172,7 @@ export default function AboutUs() {
                 >
                   View Shravans’ Teaching videos
                 </button>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
