@@ -18,8 +18,9 @@
     height: fit-content;
 }
 
-@media (max-width:767) {
+@media (max-width:767px) {
     .faq-section .tabs {
-        overflow-x: scroll;
+        overflow-x: auto;
+        justify-content:start;
     }
 }

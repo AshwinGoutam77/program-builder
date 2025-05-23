@@ -14,7 +14,7 @@ export default function Teaching() {
 
                     <div className="carrer-advide-section">
                         <h4>Career  advice</h4>
-                        <div className="grid grid-cols-2 gap-10">
+                        <div className="grid md:grid-cols-2 gap-10">
                             <div onClick={() => {
                                 setShowModal(true);
                                 setVideoLink('https://www.youtube.com/embed/cuH1EpGIkDo?si=jc1uDmoe-I4Xkesz');
@@ -33,7 +33,7 @@ export default function Teaching() {
                     <div className="product-sessions-section">
                         <h4>Product Sessions</h4>
 
-                        <div className="grid grid-cols-4 gap-10">
+                        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
                             <a href="https://www.youtube.com/watch?v=Ljchh5jsEFc">
                                 <img src="/images/video-thumbnail-3.png" alt="video" />
                                 <h5>Gen AI & LLM’s for Product Managers</h5>
@@ -57,7 +57,7 @@ export default function Teaching() {
                     <div className="product-sessions-section">
                         <h4>Product Sessions</h4>
 
-                        <div className="grid grid-cols-4 gap-10">
+                        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
                             <div onClick={() => {
                                 setShowModal(true);
                                 setVideoLink('https://www.youtube.com/watch?v=Ljchh5jsEFc');

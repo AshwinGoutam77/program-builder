@@ -1,8 +1,8 @@
 .super-special-section {
-    background-image: url('../../public/images/dots-bg.png');
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
+  background-image: url("../../public/images/dots-bg.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
 
 /* .super-special-section .orbit-div {
@@ -19,73 +19,79 @@
 } */
 
 .orbit-flip-container {
-    perspective: 1000px;
-    margin-top: 40px !important;
-    /* padding: 40px; */
-    border-radius: 100%;
-    height: 500px;
-    width: 500px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    font-size: 32px;
-    font-style: italic;
+  perspective: 1000px;
+  margin-top: 40px !important;
+  /* padding: 40px; */
+  border-radius: 100%;
+  height: 500px;
+  width: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  font-size: 32px;
+  font-style: italic;
 }
 
 .orbit-flip-inner {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    border-radius: 50%;
-    background: transparent;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 50%;
+  background: transparent;
 }
 
 .orbit-flip-container:hover .orbit-flip-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .orbit-front,
 .orbit-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background: transparent; */
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: transparent; */
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
 }
 
 .orbit-front {
-
-    border: 1px solid #cccccc9d;
-    background: transparent;
+  border: 1px solid #cccccc9d;
+  background: transparent;
 }
 
 .orbit-back {
-    transform: rotateY(180deg);
-    background: transparent;
-    border: 1px solid #cccccc9d;
+  transform: rotateY(180deg);
+  background: transparent;
+  border: 1px solid #cccccc9d;
 }
 
-
 .super-special-section .orbit-div h3 {
-    font-size: 42px;
-    font-weight: 500;
-    font-style: italic;
-    margin: 0;
+  font-size: 42px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
 }
 
 .super-special-section .orbit-div h3 span.core {
-    /* font-weight: 500;
+  /* font-weight: 500;
     background-image: url('../../public/images/productathon-bg.png');
     background-size: cover; */
+}
+
+@media (max-width: 501px) {
+  .orbit-flip-container {
+     width: 95vh;
+     aspect-ratio: 1/1;
+     height: auto;
+  }
 }
