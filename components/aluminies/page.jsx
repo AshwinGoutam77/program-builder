@@ -187,7 +187,7 @@ export default function Alumni() {
                                 <h4>{student.name}</h4>
                                 <a href={student?.linkedin} target="_blank"><img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" /></a>
                             </div>
-                            <p className="text-sm font-bold">{student?.position}</p>
+                            <p className="text-sm font-bold user-position">{student?.position}</p>
                         </div>
                     ))}
                 </Marquee>
@@ -202,7 +202,7 @@ export default function Alumni() {
                                 <h4>{student.name}</h4>
                                 <a href={student?.linkedin} target="_blank"><img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" /></a>
                             </div>
-                            <p className="text-sm font-bold">{student?.position}</p>
+                            <p className="text-sm font-bold user-position">{student?.position}</p>
                         </div>
                     ))}
                 </Marquee>

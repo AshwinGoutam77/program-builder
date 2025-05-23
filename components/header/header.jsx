@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Dialog,
     DialogPanel,
@@ -18,7 +18,8 @@ import {
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import './page.css'
 
 const products = [
     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -33,11 +34,54 @@ const callsToAction = [
 ]
 
 export default function Header() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [Scroll, setScroll] = useState(false);
+
+    if (typeof window !== "undefined") {
+        window.addEventListener("scroll", function () {
+            scroll = window.pageYOffset || document.body.scrollTop;
+            if (scroll > 1) {
+                setScroll(true);
+            } else if (scroll <= 1) {
+                setScroll(false);
+            }
+        });
+    }
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            setScroll((window.pageYOffset || document.body.scrollTop) ? true : false);
+        }
+    }, []);
+
+    useEffect(() => {
+        const handleAnchorClick = (e) => {
+            const target = e.target;
+
+            // Traverse up if a child element is clicked inside an <a> tag
+            const anchor = target.closest("a");
+
+            if (anchor && anchor.getAttribute("href")?.startsWith("#")) {
+                const href = anchor.getAttribute("href");
+                const id = href.substring(1);
+                const el = document.getElementById(id);
+                if (el) {
+                    e.preventDefault();
+                    const y = el.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                }
+            }
+        };
+
+        document.addEventListener("click", handleAnchorClick);
+        return () => {
+            document.removeEventListener("click", handleAnchorClick);
+        };
+    }, []);
 
     return (
         <motion.div
-            className="w-full text-white px-4 md:px-8 lg:px-16 overflow-hidden"
+            className={`${Scroll && 'header-scrolled '} header-section w-full text-white px-4 md:px-8 lg:px-16 overflow-hidden`}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -91,7 +135,7 @@ export default function Header() {
                 </nav>
                 <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                     <div className="fixed inset-0 z-10" />
-                    <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <DialogPanel className="sidebar fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Company</span>

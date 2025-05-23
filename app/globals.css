@@ -130,4 +130,9 @@ header .primary-btn {
     padding: 20px 0 !important;
     margin: 20px 0 !important;
   }
+
+  .banner-section h1,
+  .banner-section h2 {
+    line-height: normal !important;
+  }
 }
