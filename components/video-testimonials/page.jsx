@@ -1,9 +1,11 @@
-"use client"
-import { useState, useEffect, useCallback } from "react"
-import useEmblaCarousel from "embla-carousel-react"
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid"
-import { PlayCircleIcon, PlayIcon } from "@heroicons/react/24/outline"
-import "./page.css"
+"use client";
+import { useState, useEffect, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import { PlayCircleIcon, PlayIcon } from "@heroicons/react/24/outline";
+import "./page.css";
+import { motion } from "framer-motion";
+
 export default function VideoTestimonialSlider() {
     const AUTOPLAY_INTERVAL = 3000;
     const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -78,17 +80,33 @@ export default function VideoTestimonialSlider() {
         },
     ]
 
-    return (
-        <div className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden" id="our-alumni">
-            <div className="container mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    {/* Left Content */}
-                    <div className="lg:col-span-4">
-                        <div className="space-y-6">
-                            <h2 className="text-3xl md:text-4xl font-bold leading-tight">Hear from our Students!</h2>
-                            <p>Real voices. Real journeys. Real impact. It’s stories from those who dared to do the work because the best proof is lived experience</p>
-                        </div>
-                    </div>
+  return (
+    <motion.div
+      className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden"
+      initial={{ opacity: 0, y: -40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{
+        duration: 0.5,
+        ease: "easeOut",
+        delay: 0.7,
+      }}
+    >
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Left Content */}
+          <div className="lg:col-span-4">
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+                Hear from our Students!
+              </h2>
+              <p>
+                Real voices. Real journeys. Real impact. It’s stories from those
+                who dared to do the work because the best proof is lived
+                experience
+              </p>
+            </div>
+          </div>
 
                     {/* Right Content - Testimonial Slider */}
                     <div className="lg:col-span-8 relative">
@@ -130,28 +148,36 @@ export default function VideoTestimonialSlider() {
                             </div>
                         </div>
 
-                        {/* Navigation Buttons */}
-                        <div className="flex justify-end mt-6 space-x-2">
-                            <button
-                                className={`p-2 rounded-full border border-white/20 ${!prevBtnEnabled ? "opacity-50 cursor-not-allowed" : "hover:bg-white/10"}`}
-                                onClick={scrollPrev}
-                                disabled={!prevBtnEnabled}
-                                aria-label="Previous slide"
-                            >
-                                <ChevronLeftIcon className="h-5 w-5" />
-                            </button>
-                            <button
-                                className={`p-2 rounded-full border border-white/20 ${!nextBtnEnabled ? "opacity-50 cursor-not-allowed" : "hover:bg-white/10"}`}
-                                onClick={scrollNext}
-                                disabled={!nextBtnEnabled}
-                                aria-label="Next slide"
-                            >
-                                <ChevronRightIcon className="h-5 w-5" />
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            {/* Navigation Buttons */}
+            <div className="flex justify-end mt-6 space-x-2">
+              <button
+                className={`p-2 rounded-full border border-white/20 ${
+                  !prevBtnEnabled
+                    ? "opacity-50 cursor-not-allowed"
+                    : "hover:bg-white/10"
+                }`}
+                onClick={scrollPrev}
+                disabled={!prevBtnEnabled}
+                aria-label="Previous slide"
+              >
+                <ChevronLeftIcon className="h-5 w-5" />
+              </button>
+              <button
+                className={`p-2 rounded-full border border-white/20 ${
+                  !nextBtnEnabled
+                    ? "opacity-50 cursor-not-allowed"
+                    : "hover:bg-white/10"
+                }`}
+                onClick={scrollNext}
+                disabled={!nextBtnEnabled}
+                aria-label="Next slide"
+              >
+                <ChevronRightIcon className="h-5 w-5" />
+              </button>
             </div>
+          </div>
         </div>
-    )
+      </div>
+    </motion.div>
+  );
 }

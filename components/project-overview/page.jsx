@@ -35,9 +35,6 @@
 //         };
 //     }, [showModal]);
 
-
-
-
 //     useEffect(() => {
 //         const onScroll = () => {
 //             const scrollY = window.scrollY
@@ -146,7 +143,6 @@
 //                 </div>
 //             )}
 
-
 //             <section className="py-20 bg-[#0f0f1a] animate-on-scroll">
 //                 <div className="container mx-auto">
 //                     <div className="max-w-4xl mx-auto">
@@ -205,125 +201,185 @@
 //     )
 // }
 
+"use client";
 
-'use client';
-
-import { useState } from 'react';
-import TabNavigation from './TabNavigation';
-import LiveWithShravan from './LiveWithShravan';
-import './page.css'
-import CaseStudy from '../case-study/page';
+import { useState } from "react";
+import TabNavigation from "./TabNavigation";
+import LiveWithShravan from "./LiveWithShravan";
+import "./page.css";
+import CaseStudy from "../case-study/page";
+import { motion } from "framer-motion";
 
 const ProgramOverview = () => {
-    const [activeTab, setActiveTab] = useState('Theory Sessions');
+  const [activeTab, setActiveTab] = useState("Theory Sessions");
 
-    const tabs = [
-        'Theory Sessions',
-        'AI Building Lab Sessions',
-        'Group Discussion Sessions',
-        'Recorded Sessions',
-        'Master Sessions',
-    ];
+  const tabs = [
+    "Theory Sessions",
+    "AI Building Lab Sessions",
+    "Group Discussion Sessions",
+    "Recorded Sessions",
+    "Master Sessions",
+  ];
 
-    const tab1 = [
-        "Live online class covering core frameworks of Product Management and First Principles Thinking.",
-        "Every Saturday (12:00PM IST- 4PM IST)",
-        "Doubt Clearance at the end of the end of each sessions",
-    ]
+  const tab1 = [
+    "Live online class covering core frameworks of Product Management and First Principles Thinking.",
+    "Every Saturday (12:00PM IST- 4PM IST)",
+    "Doubt Clearance at the end of the end of each sessions",
+  ];
 
-    const tab2 = [
-        "Solve problems and build real-world products with AI.",
-        "Every Sunday (11:30AM IST- 4:00PM IST)",
-        "Every Sunday (11:30AM IST- 4:00PM IST)"
-    ]
+  const tab2 = [
+    "Solve problems and build real-world products with AI.",
+    "Every Sunday (11:30AM IST- 4:00PM IST)",
+    "Every Sunday (11:30AM IST- 4:00PM IST)",
+  ];
 
-    const tab3 = [
-        "Solve product case studies every week through group sessions where communication and collaboration is everything",
-        "Everyday evening- (9PM- whenever sleep wins)"
-    ]
+  const tab3 = [
+    "Solve product case studies every week through group sessions where communication and collaboration is everything",
+    "Everyday evening- (9PM- whenever sleep wins)",
+  ];
 
-    const tab4 = [
-        "Additional sessions to help you master the craft of Product Thinking",
-        "Watch during the week. Build in the lab.",
-        "Unlocks every Monday. To be finished by end of the week"
-    ]
+  const tab4 = [
+    "Additional sessions to help you master the craft of Product Thinking",
+    "Watch during the week. Build in the lab.",
+    "Unlocks every Monday. To be finished by end of the week",
+  ];
 
-    const tab5 = [
-        "Sessions with global leaders where they give you the blueprint to success.",
-        "Raw insights, real stories, and answers you won’t find online."
-    ]
+  const tab5 = [
+    "Sessions with global leaders where they give you the blueprint to success.",
+    "Raw insights, real stories, and answers you won’t find online.",
+  ];
 
-    return (
-        <section className="project-overview-section" id='project-overview'>
-            <div className="container mx-auto">
-                <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8">Program Overview</h2>
+  return (
+    <section className="project-overview-section" id="project-overview">
+      <div className="container mx-auto">
+        <div className="mb-12 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+            }}
+            className="text-3xl md:text-4xl font-bold mb-8"
+          >
+            Program Overview
+          </motion.h2>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+          }}
+        >
+          <TabNavigation
+            tabs={tabs}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+        </motion.div>
+
+        <div className="mt-12">
+          {activeTab === "Theory Sessions" && <LiveWithShravan data={tab1} />}
+          {activeTab === "AI Building Lab Sessions" && (
+            <LiveWithShravan data={tab2} />
+          )}
+          {activeTab === "Group Discussion Sessions" && (
+            <LiveWithShravan data={tab3} />
+          )}
+          {activeTab === "Recorded Sessions" && <LiveWithShravan data={tab4} />}
+          {activeTab === "Master Sessions" && <LiveWithShravan data={tab5} />}
+        </div>
+
+        <div className="case-study-section">
+          <CaseStudy />
+        </div>
+
+        <motion.div
+          className="important-section grid grid-cols-1 lg:grid-cols-2 items-center gap-10"
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            delay: 0.7,
+          }}
+        >
+          <div className="">
+            <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
+              {[
+                {
+                  value: (
+                    <>
+                      28<sup>th</sup> June
+                    </>
+                  ),
+                  label: "Program Start date",
+                },
+                {
+                  value: "80",
+                  label: "Seats only for this program",
+                },
+                {
+                  value: (
+                    <>
+                      20<sup>th</sup> June
+                    </>
+                  ),
+                  label: "Last date to apply for this program",
+                },
+                {
+                  value: "74,999/-",
+                  label: "Price Of The Program",
+                },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-xl px-6 py-8 shadow-md"
+                >
+                  <h3 className="text-xl lg:text-4xl font-bold text-indigo-600 mb-2">
+                    {item.value}
+                  </h3>
+                  <p className="text-sm text-black">{item.label}</p>
                 </div>
-
-                <TabNavigation tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
-
-                <div className="mt-12">
-                    {activeTab === 'Theory Sessions' && <LiveWithShravan data={tab1} />}
-                    {activeTab === 'AI Building Lab Sessions' && <LiveWithShravan data={tab2} />}
-                    {activeTab === 'Group Discussion Sessions' && <LiveWithShravan data={tab3} />}
-                    {activeTab === 'Recorded Sessions' && <LiveWithShravan data={tab4} />}
-                    {activeTab === 'Master Sessions' && <LiveWithShravan data={tab5} />}
-                </div>
-
-
-                <div className="case-study-section">
-                    <CaseStudy />
-                </div>
-
-
-                <div className="important-section grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
-                    <div className="">
-                        <div className="grid grid-cols-2 sm:grid-cols-2 gap-4">
-                            {[
-                                {
-                                    value: <>28<sup>th</sup> June</>,
-                                    label: 'Program Start date',
-                                },
-                                {
-                                    value: '80',
-                                    label: 'Seats only for this program',
-                                },
-                                {
-                                    value: <>20<sup>th</sup> June</>,
-                                    label: 'Last date to apply for this program',
-                                },
-                                {
-                                    value: '74,999/-',
-                                    label: 'Price Of The Program',
-                                },
-                            ].map((item, idx) => (
-                                <div
-                                    key={idx}
-                                    className="bg-white rounded-xl px-6 py-8 shadow-md"
-                                >
-                                    <h3 className="text-xl lg:text-4xl font-bold text-indigo-600 mb-2">{item.value}</h3>
-                                    <p className="text-sm text-black">{item.label}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <div>
-                        <h2>Important</h2>
-
-                        <ul>
-                            <li>This isn’t for people looking to just watch and learn. You’ll be expected to show up and build.</li>
-                            <li>There will be moments of doubt, overwhelm, and discomfort — that’s how real growth feels.</li>
-                            <li>You might not get it right the first time. That’s okay — we’re here to try, reflect, and try again.</li>
-                            <li>You’ll need to manage your time, stay accountable, and lean into the discomfort of doing hard things.</li>
-                            <li>But you won’t be alone. You’ll be surrounded by people who care just as deeply and try just as hard :)</li>
-                        </ul>
-                    </div>
-                </div>
-
+              ))}
             </div>
-        </section>
-    );
+          </div>
+
+          <div>
+            <h2>Important</h2>
+
+            <ul>
+              <li>
+                This isn’t for people looking to just watch and learn. You’ll be
+                expected to show up and build.
+              </li>
+              <li>
+                There will be moments of doubt, overwhelm, and discomfort —
+                that’s how real growth feels.
+              </li>
+              <li>
+                You might not get it right the first time. That’s okay — we’re
+                here to try, reflect, and try again.
+              </li>
+              <li>
+                You’ll need to manage your time, stay accountable, and lean into
+                the discomfort of doing hard things.
+              </li>
+              <li>
+                But you won’t be alone. You’ll be surrounded by people who care
+                just as deeply and try just as hard :)
+              </li>
+            </ul>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 };
 
 export default ProgramOverview;

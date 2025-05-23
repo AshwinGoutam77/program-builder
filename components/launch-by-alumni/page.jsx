@@ -2,6 +2,7 @@
 import Marquee from "react-fast-marquee";
 import './page.css'
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function LaunchByAlumni() {
     const data = [
@@ -79,7 +80,16 @@ export default function LaunchByAlumni() {
     }, []);
 
     return (
-        <section className="launch-by-alumni-section w-full overflow-hidden">
+        <motion.section className="launch-by-alumni-section w-full overflow-hidden"
+           initial={{ opacity: 0, y: -40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{
+                      duration: 0.5,
+                      ease: "easeOut", 
+                      delay:.8
+                    }}
+        >
             <div className="">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     {/* Left Content */}
@@ -112,6 +122,6 @@ export default function LaunchByAlumni() {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }

@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './page.css';
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 
 export default function VideoSlider() {
 
@@ -55,8 +56,21 @@ export default function VideoSlider() {
 
     return (
         <section className="video-slider-section text-center">
-            <h2 className="mb-10">Be Part of a Thriving Community ❤️</h2>
-            <div className="w-full slider-container text-white">
+            <motion.h2 className="mb-10"  initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+            }}>Be Part of a Thriving Community ❤️</motion.h2>
+            <motion.div className="w-full slider-container text-white"  initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+              delay:.2
+            }}>
                 <Slider {...settings}>
                     <div>
                         <video
@@ -84,7 +98,7 @@ export default function VideoSlider() {
                         <img src="/images/gallery-2.png" alt="5" />
                     </div>
                 </Slider>
-            </div>
+            </motion.div>
         </section>
     );
 }

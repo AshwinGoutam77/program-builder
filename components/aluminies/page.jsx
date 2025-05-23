@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import './page.css'
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 const students = [
     {
@@ -166,10 +167,16 @@ export default function Alumni() {
 
     return (
         <section className="alumni-section w-full text-white">
-            <div className="container mx-auto text-center">
+            <motion.div className="container mx-auto text-center"   initial={{ opacity: 0, y: -40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.1 }}
+                    transition={{
+                      duration: 0.5,
+                      ease: "easeOut",  
+                    }}>
                 <h2 className="mb-2">Our Alumni</h2>
                 <p>A network of builders- they continue to shape others’ paths by becoming 1% better everyday. Scroll <span className="block"> through, reach out, get inspired.</span></p>
-            </div>
+            </motion.div>
 
             <div className="mt-10">
                 <Marquee speed={50} delay={0} play={play} autoFill pauseOnHover direction="right">

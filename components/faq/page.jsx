@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import "./page.css";
+import { motion } from "framer-motion";
 
 const tabs = [
   { name: "General Queries", key: "GeneralInquiries" },
@@ -250,10 +251,32 @@ export default function FAQSection() {
   return (
     <section className="faq-section text-white">
       <div className="container mx-auto">
-        <h2 className="text-center text-3xl font-semibold mb-8">FAQs</h2>
+        <motion.h2
+          className="text-center text-3xl font-semibold mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            delay: 0.2,
+          }}
+        >
+          FAQs
+        </motion.h2>
 
         {/* Tabs */}
-        <div className="tabs flex justify-center mb-6 gap-5">
+        <motion.div
+          className="tabs flex justify-center mb-6 gap-5"
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            delay: 0.4,
+          }}
+        >
           {tabs.map((tab) => (
             <button
               key={tab.key}
@@ -270,12 +293,20 @@ export default function FAQSection() {
               {tab.name}
             </button>
           ))}
-        </div>
+        </motion.div>
 
         {/* Accordion */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
           {(faqData[activeTab.key] || []).map((item, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: -40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{
+                duration: 0.5,
+                ease: "easeOut",
+                delay: 0.6,
+              }}
               key={index}
               className="accordion-div border border-gray-700 rounded-md"
             >
@@ -297,7 +328,7 @@ export default function FAQSection() {
                   {item.answer}
                 </div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
