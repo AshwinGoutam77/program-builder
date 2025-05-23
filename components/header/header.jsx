@@ -105,22 +105,21 @@ export default function Header() {
                     </div>
 
                     <div className='header-menus flex gap-10'>
-
-                    </div>
-
-                    <div className="hidden lg:flex items-center lg:flex-1 lg:justify-end gap-5">
-                        <a href="#about-us" className="text-sm/6 font-semibold text-white">
+                        <a href="#about-section" className="text-sm/6 font-semibold text-white">
                             About Us
                         </a>
                         <a href="#project-overview" className="text-sm/6 font-semibold text-white">
                             Program Overview
                         </a>
-                        <a href="#" className="text-sm/6 font-semibold text-white">
+                        <a href="#our-alumni" className="text-sm/6 font-semibold text-white">
                             Our Alumni
                         </a>
                         <a href="#sarvan-teaching" className="text-sm/6 font-semibold text-white">
                             Shravan Teaches
                         </a>
+                    </div>
+
+                    <div className="hidden lg:flex items-center lg:flex-1 lg:justify-end gap-5">
                         <a href="#" className="primary-btn">
                             Contact Us
                         </a>

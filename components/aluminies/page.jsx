@@ -166,7 +166,7 @@ export default function Alumni() {
     }, []);
 
     return (
-        <section className="alumni-section w-full text-white">
+        <section className="alumni-section w-full text-white" id='our-alumni'>
             <motion.div className="container mx-auto text-center"   initial={{ opacity: 0, y: -40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
