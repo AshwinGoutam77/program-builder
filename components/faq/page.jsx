@@ -229,7 +229,7 @@ export default function FAQSection() {
                     {(faqData[activeTab.key] || []).map((item, index) => (
                         <div
                             key={index}
-                            className="border border-gray-700 rounded-md"
+                            className="accordion-div border border-gray-700 rounded-md"
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
