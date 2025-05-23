@@ -90,12 +90,7 @@ export default function Header() {
                 <nav aria-label="Global" className="flex items-center justify-between py-6">
                     <div className="flex lg:flex-1">
                         <a href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
-                            <img
-                                alt=""
-                                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                                className="h-8 w-auto"
-                            />
+                            <p className='logo'>Rethink Systems</p>
                         </a>
                     </div>
                     <div className="flex lg:hidden">
@@ -109,25 +104,22 @@ export default function Header() {
                         </button>
                     </div>
 
+                    <div className='header-menus flex gap-10'>
+                        <a href="#about-us" className="text-sm/6 font-semibold text-white">
+                            About Us
+                        </a>
+                        <a href="#project-overview" className="text-sm/6 font-semibold text-white">
+                            Program Overview
+                        </a>
+                        <a href="#" className="text-sm/6 font-semibold text-white">
+                            Our Alumni
+                        </a>
+                        <a href="#sarvan-teaching" className="text-sm/6 font-semibold text-white">
+                            Shravan Teaches
+                        </a>
+                    </div>
+
                     <div className="hidden lg:flex items-center lg:flex-1 lg:justify-end gap-5">
-                        <a href="#" className="text-sm/6 font-semibold text-white">
-                            Features
-                        </a>
-                        <a href="#" className="text-sm/6 font-semibold text-white">
-                            Products
-                        </a>
-                        <a href="#" className="text-sm/6 font-semibold text-white">
-                            Solutions
-                        </a>
-                        <a href="#" className="text-sm/6 font-semibold text-white">
-                            Features
-                        </a>
-                        <a href="#" className="text-sm/6 font-semibold text-white">
-                            Products
-                        </a>
-                        <a href="#" className="text-sm/6 font-semibold text-white">
-                            Features
-                        </a>
                         <a href="#" className="primary-btn">
                             Contact Us
                         </a>
@@ -157,24 +149,7 @@ export default function Header() {
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
-                                    <Disclosure as="div" className="-mx-3">
-                                        <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                                            Product
-                                            <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
-                                        </DisclosureButton>
-                                        <DisclosurePanel className="mt-2 space-y-2">
-                                            {[...products, ...callsToAction].map((item) => (
-                                                <DisclosureButton
-                                                    key={item.name}
-                                                    as="a"
-                                                    href={item.href}
-                                                    className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                                >
-                                                    {item.name}
-                                                </DisclosureButton>
-                                            ))}
-                                        </DisclosurePanel>
-                                    </Disclosure>
+                                    <a href=""></a>
                                     <a
                                         href="#"
                                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"

@@ -5,16 +5,32 @@
     transition: 0.3s;
 }
 
-.header-section svg{
+.header-section .logo {
+    font-size: 18px !important;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+
+}
+
+.header-section svg {
     stroke: white;
 }
 
-.header-section.header-scrolled svg{
+.header-section.header-scrolled svg {
     stroke: black;
 }
 
-.header-section .sidebar{
+.header-section .sidebar {
     display: none;
+}
+
+.header-section a{
+    transition: .3s;
+}
+
+.header-section a:hover{
+    color: #6675ff;
 }
 
 .header-section.header-scrolled {
@@ -31,6 +47,12 @@
     color: white;
 }
 
-.sidebar{
+.sidebar {
     z-index: 9999;
+}
+
+@media (max-width:1024px){
+    .header-menus{
+        display: none;
+    }
 }

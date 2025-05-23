@@ -47,7 +47,7 @@ const curriculumData = [
         key: "assignments",
         label: "Live Lab Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img
               src="../../images/week-1-2.png"
               alt="img"
@@ -93,7 +93,7 @@ const curriculumData = [
         key: "live",
         label: "Live Theory Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img src="../../images/week-2.png" alt="img" className="rounded" />
             <div>
               <div className="flex gap-2">
@@ -128,7 +128,7 @@ const curriculumData = [
         key: "assignments",
         label: "Live Lab Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img
               src="../../images/week-1-2.png"
               alt="img"
@@ -170,7 +170,7 @@ const curriculumData = [
         key: "live",
         label: "Live Theory Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img src="../../images/week-3.png" alt="img" className="rounded" />
             <div>
               <ul>
@@ -199,7 +199,7 @@ const curriculumData = [
         key: "assignments",
         label: "Live Lab Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img
               src="../../images/week-3-2.png"
               alt="img"
@@ -243,7 +243,7 @@ const curriculumData = [
         key: "live",
         label: "Live Theory Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img src="../../images/week-4.png" alt="img" className="rounded" />
             <div>
               <ul>
@@ -273,7 +273,7 @@ const curriculumData = [
         key: "assignments",
         label: "Live Lab Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img
               src="../../images/week-3-2.png"
               alt="img"
@@ -316,7 +316,7 @@ const curriculumData = [
         key: "live",
         label: "Live Theory Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img src="../../images/week-5.png" alt="img" className="rounded" />
             <div>
               <ul>
@@ -345,7 +345,7 @@ const curriculumData = [
         key: "assignments",
         label: "Live Lab Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img
               src="../../images/week-1-2.png"
               alt="img"
@@ -389,7 +389,7 @@ const curriculumData = [
         key: "live",
         label: "Live Theory Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img src="../../images/week-6.png" alt="img" className="rounded" />
             <div>
               <ul>
@@ -419,7 +419,7 @@ const curriculumData = [
         key: "assignments",
         label: "Live Lab Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img
               src="../../images/week-6-2.png"
               alt="img"
@@ -463,7 +463,7 @@ const curriculumData = [
         key: "live",
         label: "Live Theory Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img src="../../images/week-7.png" alt="img" className="rounded" />
             <div>
               <ul>
@@ -492,7 +492,7 @@ const curriculumData = [
         key: "assignments",
         label: "Live Lab Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img
               src="../../images/week-7-2.png"
               alt="img"
@@ -536,7 +536,7 @@ const curriculumData = [
         key: "live",
         label: "Live Theory Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img src="../../images/week-2.png" alt="img" className="rounded" />
             <div>
               <ul>
@@ -565,7 +565,7 @@ const curriculumData = [
         key: "assignments",
         label: "Live Lab Session",
         content: (
-          <div className="grid grid-cols-1 lg-grid-cols-2 items-center gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
             <img
               src="../../images/week-6-2.png"
               alt="img"
@@ -658,7 +658,7 @@ export default function CourseCurriculum() {
           >
             <button
               onClick={() => toggleAccordion(i)}
-              className="w-full flex items-center justify-between p-4 focus:outline-none"
+              className="w-full flex items-center justify-between p-4 focus:outline-none cursor-pointer"
               disabled={locked}
             >
               <div className="flex items-center gap-4 text-left">
@@ -687,7 +687,7 @@ export default function CourseCurriculum() {
                         <button
                           key={key}
                           onClick={() => setTabForWeek(i, key)}
-                          className={`py-2 text-start w-full ${
+                          className={`py-2 text-start w-full cursor-pointer ${
                             activeTabs[i] === key
                               ? "border-b-1 border-white text-white"
                               : "text-gray-400"

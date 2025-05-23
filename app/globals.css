@@ -55,20 +55,21 @@ section {
 }
 
 .gradient {
-  font-weight: bold;
-  background: linear-gradient(90deg,
+  font-weight: 500;
+  /* background: linear-gradient(90deg,
       hsla(255, 92%, 76%, 1) 0%,
       hsla(172, 66%, 50%, 1) 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: #FCB0FF;
 }
 
-header .primary-btn {
+/* header .primary-btn {
   padding: 12px;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
-}
+} */
 
 .primary-btn {
   background-color: white;
@@ -83,6 +84,21 @@ header .primary-btn {
   font-size: 14px;
   cursor: pointer;
   /* width: 100%; */
+  transition: all 0.3s;
+}
+
+.primary-btn img {
+  transition: all 0.3s;
+}
+
+.primary-btn:hover {
+  background-color: #171717;
+  color: white;
+  box-shadow: 0 1px 16px hsla(0,0%,100%,.4);
+}
+
+.primary-btn:hover img {
+  filter: invert(1);
 }
 
 .primary-btn svg {
@@ -102,6 +118,13 @@ header .primary-btn {
   font-weight: 600;
   border: 1px solid #ffffff3b;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background-color: white;
+  color: #171717;
+  box-shadow: 0 1px 16px hsla(0,0%,100%,.4);
 }
 
 .container {

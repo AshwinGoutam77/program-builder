@@ -147,6 +147,12 @@
   color: white;
 }
 
+@media (max-width:1024px) {
+  .pm-cards .card:nth-child(2){
+    left: 100px;
+  }
+}
+
 @media (max-width: 767px) {
   .pm-cards {
     margin: auto;
@@ -156,7 +162,8 @@
     position: relative;
     left: 0;
   }
-  .project-management-section{
+
+  .project-management-section {
     padding-bottom: 65px !important;
     margin-bottom: 0 !important;
   }
@@ -166,13 +173,14 @@
   .pm-cards .card:first-child {
     width: 95vw;
     height: 420px;
-    padding: 3px;   
+    padding: 3px;
     left: -5px;
   }
+
   .pm-cards .card:nth-child(2) {
     width: 95vw;
     height: 420px;
-    padding: 3px;   
+    padding: 3px;
     left: -5px;
   }
 }

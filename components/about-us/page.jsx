@@ -152,12 +152,12 @@ export default function AboutUs() {
                                         }}
                                         key={index}
                                         onClick={() => goToSlide(index)}
-                                        className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSlide === index
-                                            ? "bg-blue-600 w-6"
-                                            : "bg-gray-400 hover:bg-gray-600"
+                                        className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${currentSlide === index
+                                            ? "bg-[#8980ed] w-6"
+                                            : "bg-[#ffff] hover:bg-gray-600"
                                             }`}
                                         aria-label={`Go to slide ${index + 1}`}
-                                    />
+                                    ></button>
                                 ))}
                             </div>
 
