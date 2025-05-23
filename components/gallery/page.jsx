@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -40,6 +40,29 @@ export default function VideoSlider() {
         nextArrow: <CustomNextArrow />,
     };
 
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1.5,
+    speed: 500,
+    nav: false,
+    responsive: [
+      {
+        breakpoint: 568,
+        settings: {
+          slidesToShow: 1, 
+        },
+      }, 
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1.2, 
+        },
+      }, 
+    ],
+  };
 
     return (
         <section className="video-slider-section text-center">

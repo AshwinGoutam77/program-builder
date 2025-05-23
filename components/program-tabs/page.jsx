@@ -83,7 +83,7 @@ export default function ProgramTabsSection() {
               variants={containerVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10"
+              className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-10 fliping-cards"
             >
               {tabs.map((item, index) => (
                 <motion.div

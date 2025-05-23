@@ -55,3 +55,9 @@
     background-color: #6154F3;
     border: 1px solid #6154F3;
 }
+
+@media (max-width:600px) {
+    .testimonials-slider-section .item{
+        width: 90vw;
+    }
+}

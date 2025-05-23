@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid"
 import { PlayCircleIcon, PlayIcon } from "@heroicons/react/24/outline"
-
+import "./page.css"
 export default function VideoTestimonialSlider() {
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
@@ -88,7 +88,7 @@ export default function VideoTestimonialSlider() {
                                         key={testimonial.id}
                                         className="pl-4 first:pl-0"
                                     >
-                                        <div className="bg-gray-900 h-100 w-[300px] rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/30">
+                                        <div className="bg-gray-900 h-100  w-[300px] testimonial-card shrink-0 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/30">
                                             <div className="relative">
                                                 <div className="bg-[#0E8A7B] aspect-square">
                                                     <img
