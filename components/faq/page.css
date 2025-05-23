@@ -23,4 +23,7 @@
         overflow-x: auto;
         justify-content:start;
     }
+    .faq-section .tabs button {
+    white-space: nowrap;
+}
 }

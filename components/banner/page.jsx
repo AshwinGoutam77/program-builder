@@ -7,7 +7,7 @@ export default function Banner() {
     return (
         <>
             <motion.div
-                className="w-full text-white px-4 md:px-8 lg:px-16 overflow-hidden"
+                className="w-full text-white   md:px-8 lg:px-16 overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}

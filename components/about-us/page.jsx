@@ -141,7 +141,7 @@ export default function AboutUs() {
                             </ul>
                             <div className="flex gap-1 justify-start pl-7 pb-5">
                                 {slides.map((_, index) => (
-                                    <motion.button
+                                    <button
                                         initial={{ opacity: 0, y: -40 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         viewport={{ once: true, amount: 0.1 }}

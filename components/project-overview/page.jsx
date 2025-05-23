@@ -249,14 +249,38 @@ const ProgramOverview = () => {
     "Raw insights, real stories, and answers you won’t find online.",
   ];
 
-    return (
-        <section className="project-overview-section" id='project-overview'>
-            <div className="container mx-auto">
-                <div className="mb-12 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8">Program Overview</h2>
-                </div>
-
-                <TabNavigation tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
+  return (
+    <section className="project-overview-section" id="project-overview">
+      <div className="container mx-auto">
+        <div className="mb-12 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{
+              duration: 0.6,
+              ease: "easeOut",
+            }}
+            className="text-3xl md:text-4xl font-bold mb-8"
+          >
+            Program Overview
+          </motion.h2>
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+          }}
+        >
+          <TabNavigation
+            tabs={tabs}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+        </motion.div>
 
         <div className="mt-12">
           {activeTab === "Theory Sessions" && <LiveWithShravan data={tab1} />}
@@ -282,7 +306,7 @@ const ProgramOverview = () => {
           transition={{
             duration: 0.5,
             ease: "easeOut",
-            delay:.7
+            delay: 0.7,
           }}
         >
           <div className="">

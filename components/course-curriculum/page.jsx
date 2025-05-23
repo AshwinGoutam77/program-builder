@@ -3,7 +3,7 @@
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import "./page.css";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 
 const curriculumData = [
   {
@@ -624,76 +624,93 @@ export default function CourseCurriculum() {
     });
   };
 
-    return (
-        <div className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden" id="curriculum-overview">
-            <div className="max-w-5xl mx-auto">
-                <div className="text-center mb-10">
-                    <h2 className="mb-2">What will you learn?</h2>
-                    <p className="text-sm text-gray-400">
-                        Build real products, become a systems thinker and master the Product mindset <span className="block">-all with AI by your side.</span>
-                    </p>
-                </div>
-
-                {curriculumData.map(({ week, title, tabs, locked }, i) => (
-                    <div
-                        key={i}
-                        className="border border-gray-800 rounded-lg overflow-hidden mb-4 transition-all duration-300"
-                    >
-                        <button
-                            onClick={() => toggleAccordion(i)}
-                            className="w-full flex items-center justify-between p-4 focus:outline-none"
-                            disabled={locked}
-                        >
-                            <div className="flex items-center gap-4 text-left">
-                                <span className="week-box">Week {week}</span>
-                                <span className="font-medium">{title}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <ChevronDownIcon
-                                    className={`h-4 w-4 transform transition-transform duration-200 ${openIndex === i ? "rotate-180" : ""
-                                        } ${locked ? "opacity-50" : ""}`}
-                                />
-                            </div>
-                        </button>
-
-              {openIndex === i && (
-                <div className="border-t border-gray-800 px-4 pb-6 pt-2">
-                  {locked ? (
-                    <p className="text-gray-400">
-                      Content for Week {week} will be unlocked soon.
-                    </p>
-                  ) : (
-                    <>
-                      <div className="flex gap-10 border-b border-gray-800 text-sm">
-                        {tabs.map(({ key, label }) => (
-                          <button
-                            key={key}
-                            onClick={() => setTabForWeek(i, key)}
-                            className={`py-2 text-start w-full ${
-                              activeTabs[i] === key
-                                ? "border-b-1 border-white text-white"
-                                : "text-gray-400"
-                            }`}
-                          >
-                            {label}
-                          </button>
-                        ))}
-                      </div>
-
-                      <div className="mt-4 tabs-content-section">
-                        {tabs.map(({ key, content }) =>
-                          activeTabs[i] === key ? (
-                            <div key={key}>{content}</div>
-                          ) : null
-                        )}
-                      </div>
-                    </>
-                  )}
-                </div>
-              )}
-            </div>
-          ))}
+  return (
+    <div className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          className="text-center mb-10"
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{
+            duration: 0.2,
+            ease: "easeOut",
+          }}
+        >
+          <h1 className="text-4xl font-bold mb-2">What will you learn?</h1>
+          <p className="text-sm text-gray-400">
+            Build real products, become a systems thinker and master the Product
+            mindset <span className="block">-all with AI by your side.</span>
+          </p>
         </motion.div>
+
+        {curriculumData.map(({ week, title, tabs, locked }, i) => (
+          <motion.div
+           initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{
+              duration: .1, 
+              ease: "easeOut", 
+            }}
+            key={i}
+            className="border border-gray-800 rounded-lg overflow-hidden mb-4 transition-all duration-300"
+          >
+            <button
+              onClick={() => toggleAccordion(i)}
+              className="w-full flex items-center justify-between p-4 focus:outline-none"
+              disabled={locked}
+            >
+              <div className="flex items-center gap-4 text-left">
+                <span className="week-box">Week {week}</span>
+                <span className="font-medium">{title}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ChevronDownIcon
+                  className={`h-4 w-4 transform transition-transform duration-200 ${
+                    openIndex === i ? "rotate-180" : ""
+                  } ${locked ? "opacity-50" : ""}`}
+                />
+              </div>
+            </button>
+
+            {openIndex === i && (
+              <div className="border-t border-gray-800 px-4 pb-6 pt-2">
+                {locked ? (
+                  <p className="text-gray-400">
+                    Content for Week {week} will be unlocked soon.
+                  </p>
+                ) : (
+                  <>
+                    <div className="flex gap-10 border-b border-gray-800 text-sm">
+                      {tabs.map(({ key, label }) => (
+                        <button
+                          key={key}
+                          onClick={() => setTabForWeek(i, key)}
+                          className={`py-2 text-start w-full ${
+                            activeTabs[i] === key
+                              ? "border-b-1 border-white text-white"
+                              : "text-gray-400"
+                          }`}
+                        >
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+
+                    <div className="mt-4 tabs-content-section">
+                      {tabs.map(({ key, content }) =>
+                        activeTabs[i] === key ? (
+                          <div key={key}>{content}</div>
+                        ) : null
+                      )}
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
+          </motion.div>
+        ))}
       </div>
     </div>
   );
