@@ -30,7 +30,7 @@
   border-radius: 8px;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
-  cursor: pointer;
+  /* cursor: pointer; */
   padding: 30px;
 }
 
@@ -46,7 +46,7 @@
   border-radius: 8px;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
-  cursor: pointer;
+  /* cursor: pointer; */
   z-index: 2;
   padding: 30px;
 }
