@@ -102,7 +102,7 @@ export default function LaunchByAlumni() {
                     </div>
 
                     {/* Right Content - Testimonial Slider */}
-                    <div className="lg:col-span-8">
+                    <div className="video-card-section lg:col-span-8">
                         <div className="">
                             <div className="flex">
                                 <Marquee speed={100} delay={3} play={play} autoFill pauseOnHover className="">

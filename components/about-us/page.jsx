@@ -62,7 +62,7 @@ export default function AboutUs() {
         <section id="about-section">
             <div className="relative container mx-auto">
                 <div className="relative overflow-hidden">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[40%_60%] gap-10 items-center">
                         {/* Left Image */}
                         <motion.div className="relative w-full">
                             <motion.img
@@ -82,19 +82,19 @@ export default function AboutUs() {
                                     <h4>
                                         <Counter target={174} inView={true} />k <span>+</span>
                                     </h4>
-                                    <p>Avg. growth</p>
+                                    <p>Linkedin Folowers</p>
                                 </div>
                                 <div>
                                     <h4>
                                         <Counter target={45} inView={true} />k <span>+</span>
                                     </h4>
-                                    <p>Projects</p>
+                                    <p>Youtube Followers</p>
                                 </div>
                                 <div>
                                     <h4>
                                         <Counter target={10} inView={true} /> <span>+</span>
                                     </h4>
-                                    <p>Happy investors</p>
+                                    <p>Years of Exp</p>
                                 </div>
                             </div>
                         </motion.div>

@@ -33,7 +33,7 @@ h1 {
 h2 {
   font-size: clamp(1.75rem, 1.588rem + 0.8642vw, 2.625rem) !important;
   font-weight: 600 !important;
-  line-height: normal !important;
+  line-height: 45px !important;
   color: white;
 }
 

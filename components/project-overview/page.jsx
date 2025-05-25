@@ -355,23 +355,23 @@ const ProgramOverview = () => {
 
             <ul>
               <li>
-                This isn’t for people looking to just watch and learn. You’ll be
+               <img src="/images/right-click.png" alt="right-clicked" className="mt-1" /> This isn’t for people looking to just watch and learn. You’ll be
                 expected to show up and build.
               </li>
               <li>
-                There will be moments of doubt, overwhelm, and discomfort —
+               <img src="/images/right-click.png" alt="right-clicked" className="mt-1" /> There will be moments of doubt, overwhelm, and discomfort —
                 that’s how real growth feels.
               </li>
               <li>
-                You might not get it right the first time. That’s okay — we’re
+               <img src="/images/right-click.png" alt="right-clicked" className="mt-1" /> You might not get it right the first time. That’s okay — we’re
                 here to try, reflect, and try again.
               </li>
               <li>
-                You’ll need to manage your time, stay accountable, and lean into
+               <img src="/images/right-click.png" alt="right-clicked" className="mt-1" /> You’ll need to manage your time, stay accountable, and lean into
                 the discomfort of doing hard things.
               </li>
               <li>
-                But you won’t be alone. You’ll be surrounded by people who care
+               <img src="/images/right-click.png" alt="right-clicked" className="mt-1" /> But you won’t be alone. You’ll be surrounded by people who care
                 just as deeply and try just as hard :)
               </li>
             </ul>

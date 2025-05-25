@@ -92,13 +92,13 @@ export default function VideoTestimonialSlider() {
         delay: 0.7,
       }}
     >
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="container mx-auto students-section">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Content */}
           <div className="lg:col-span-4">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                Hear from our Students!
+              <h2 className="leading-tight">
+                Hear from <span className="block">our Students!</span>
               </h2>
               <p>
                 Real voices. Real journeys. Real impact. It’s stories from those
@@ -109,7 +109,7 @@ export default function VideoTestimonialSlider() {
           </div>
 
           {/* Right Content - Testimonial Slider */}
-          <div className="lg:col-span-8 relative">
+          <div className="video-card-section lg:col-span-8 relative">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
                 {testimonials.map((testimonial) => (
@@ -119,7 +119,7 @@ export default function VideoTestimonialSlider() {
                   >
                     <div className="bg-gray-900 h-100  w-[300px] testimonial-card shrink-0 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/30">
                       <div className="relative">
-                        <div className="bg-[#0E8A7B] aspect-square">
+                        <div className="aspect-square">
                           <img
                             src={testimonial.image || "/placeholder.svg"}
                             alt="Testimonial"
