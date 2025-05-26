@@ -7,13 +7,15 @@ import { PartnerLogos } from "../CourseCurriculum/PartnerLogos";
 import { useState } from "react";
 import MobileCurriculum from "../CourseCurriculum/MobileCurriculum";
 import { delay, motion } from "framer-motion";
+import './page.css'
+
 export default function CourseCurriculum() {
   return (
-    <div className="bg-gradient-to-br text-white p-6 md:p-12 flex justify-center items-center">
+    <section className="curriculam-section text-white p-6 md:p-12 flex justify-center items-center">
       <div className="max-w-7xl w-full">
         <CourseSchedule />
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -207,7 +209,7 @@ function CourseSchedule() {
         </div>
 
         <div className="md:col-span-8">
-          <div className="bg-indigo-950/50 rounded-xl p-6 border border-indigo-800/30 backdrop-blur-sm space-y-8 h-full">
+          <div className="rounded-xl p-6 border border-indigo-800/30 backdrop-blur-sm space-y-8 h-full">
             <SessionTheory content={weekContent[activeWeek].theory} />
             <SessionLab content={weekContent[activeWeek].lab} />
             <PartnerLogos />
