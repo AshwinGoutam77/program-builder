@@ -62,7 +62,7 @@ export default function AboutUs() {
         <section id="about-section">
             <div className="relative container mx-auto">
                 <div className="relative overflow-hidden">
-                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[40%_60%] gap-10 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[40%_60%] gap-10 items-start">
                         {/* Left Image */}
                         <motion.div className="relative w-full">
                             <motion.img
@@ -100,7 +100,7 @@ export default function AboutUs() {
                         </motion.div>
 
                         {/* Right Content */}
-                        <div className="flex flex-col justify-center">
+                        <div className="flex flex-col gap-1 justify-center">
                             <motion.h2
                                 className="sarvan-heading text-white mb-4 text-gray-900"
                                 initial={{ opacity: 0, y: -40 }}
@@ -128,7 +128,7 @@ export default function AboutUs() {
                                             ease: "easeOut",
                                         }}
                                         key={index}
-                                        className="text-gray-600 text-sm mb-4 text-white flex items-start gap-2"
+                                        className="text-gray-600 lg:w-[80%] mb-4 text-white flex items-start gap-2"
                                     >
                                         <img
                                             src="/images/right-click.png"
