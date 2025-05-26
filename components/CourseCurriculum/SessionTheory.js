@@ -16,7 +16,7 @@ export function SessionTheory({ content }) {
       <ul className="space-y-2 text-sm">
         {content.topics.map((topic, index) => (
           <li key={index} className="flex items-start">
-            <span className="text-indigo-400 mr-2"> <img src="/images/right-click.png" alt="icon" /></span>
+            <span className="text-indigo-400 mr-2"> <img src="/images/right-click.png" alt="icon" className='mt-1'/></span>
             <span>{topic}</span>
           </li>
         ))}

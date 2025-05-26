@@ -207,7 +207,7 @@ function CourseSchedule() {
         </div>
 
         <div className="md:col-span-8">
-          <div className="bg-indigo-950/50 rounded-xl p-6 border border-indigo-800/30 backdrop-blur-sm space-y-8">
+          <div className="bg-indigo-950/50 rounded-xl p-6 border border-indigo-800/30 backdrop-blur-sm space-y-8 h-full">
             <SessionTheory content={weekContent[activeWeek].theory} />
             <SessionLab content={weekContent[activeWeek].lab} />
             <PartnerLogos />
