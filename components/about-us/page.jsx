@@ -62,7 +62,7 @@ export default function AboutUs() {
         <section id="about-section">
             <div className="relative container mx-auto">
                 <div className="relative overflow-hidden">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[40%_60%] gap-10 items-start">
                         {/* Left Image */}
                         <motion.div className="relative w-full">
                             <motion.img
@@ -80,27 +80,27 @@ export default function AboutUs() {
                             <div className="metric-box">
                                 <div>
                                     <h4>
-                                        <Counter target={100} inView={true} /> <span>+</span>
+                                        <Counter target={174} inView={true} />k <span>+</span>
                                     </h4>
-                                    <p>Avg. growth</p>
+                                    <p>Linkedin Folowers</p>
                                 </div>
                                 <div>
                                     <h4>
-                                        <Counter target={450} inView={true} /> <span>+</span>
+                                        <Counter target={45} inView={true} />k <span>+</span>
                                     </h4>
-                                    <p>Projects</p>
+                                    <p>Youtube Followers</p>
                                 </div>
                                 <div>
                                     <h4>
-                                        <Counter target={10} inView={true} />K <span>+</span>
+                                        <Counter target={10} inView={true} /> <span>+</span>
                                     </h4>
-                                    <p>Happy investors</p>
+                                    <p>Years of Exp</p>
                                 </div>
                             </div>
                         </motion.div>
 
                         {/* Right Content */}
-                        <div className="flex flex-col justify-center">
+                        <div className="flex flex-col gap-1 justify-center">
                             <motion.h2
                                 className="sarvan-heading text-white mb-4 text-gray-900"
                                 initial={{ opacity: 0, y: -40 }}
@@ -128,7 +128,7 @@ export default function AboutUs() {
                                             ease: "easeOut",
                                         }}
                                         key={index}
-                                        className="text-gray-600 text-sm mb-4 text-white flex items-start gap-2"
+                                        className="text-gray-600 lg:w-[80%] mb-4 text-white flex items-start gap-2"
                                     >
                                         <img
                                             src="/images/right-click.png"
@@ -152,17 +152,17 @@ export default function AboutUs() {
                                         }}
                                         key={index}
                                         onClick={() => goToSlide(index)}
-                                        className={`w-2 h-2 rounded-full transition-all duration-300 ${currentSlide === index
-                                            ? "bg-blue-600 w-6"
-                                            : "bg-gray-400 hover:bg-gray-600"
+                                        className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${currentSlide === index
+                                            ? "bg-[#FFBDFE] w-6"
+                                            : "bg-[#ffff] hover:bg-gray-600"
                                             }`}
                                         aria-label={`Go to slide ${index + 1}`}
-                                    />
+                                    ></button>
                                 ))}
                             </div>
 
                             <div className="flex flex-wrap gap-5 items-center mt-4">
-                                <button className="primary-btn mr-4">
+                                <button className="primary-btn">
                                     APPLY NOW <img src="/images/arrow.png" alt="" />
                                 </button>
                                 <a

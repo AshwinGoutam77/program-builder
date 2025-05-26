@@ -56,21 +56,21 @@ export default function VideoSlider() {
 
     return (
         <section className="video-slider-section text-center">
-            <motion.h2 className="mb-10"  initial={{ opacity: 0, y: -40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{
-              duration: 0.5,
-              ease: "easeOut",
-            }}>Be Part of a Thriving Community ❤️</motion.h2>
-            <motion.div className="w-full slider-container text-white"  initial={{ opacity: 0, y: -40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{
-              duration: 0.5,
-              ease: "easeOut",
-              delay:.2
-            }}>
+            <motion.h2 className="mb-10" initial={{ opacity: 0, y: -40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{
+                    duration: 0.5,
+                    ease: "easeOut",
+                }}>Be Part of a Thriving Community ❤️</motion.h2>
+            <motion.div className="w-full slider-container text-white" initial={{ opacity: 0, y: -40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{
+                    duration: 0.5,
+                    ease: "easeOut",
+                    delay: .2
+                }}>
                 <Slider {...settings}>
                     <div>
                         <video

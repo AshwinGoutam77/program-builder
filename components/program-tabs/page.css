@@ -93,12 +93,12 @@
 
 @media(max-width:767px){
     .program-section .card{
-        padding: 80px;
+        padding: 75px;
     }
 }
 
 @media (max-width:400px) {
     .program-section .fliping-cards{
-        grid-template-columns: repeat(1,1fr)
+        grid-template-columns: repeat(2,1fr)
     }
 }

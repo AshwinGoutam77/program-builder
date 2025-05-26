@@ -166,7 +166,7 @@ export default function Alumni() {
     }, []);
 
     return (
-        <section className="alumni-section w-full text-white">
+        <section className="alumni-section w-full text-white" id='our-alumni'>
             <motion.div className="container mx-auto text-center"   initial={{ opacity: 0, y: -40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.1 }}
@@ -187,7 +187,7 @@ export default function Alumni() {
                                 <h4>{student.name}</h4>
                                 <a href={student?.linkedin} target="_blank"><img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" /></a>
                             </div>
-                            <p className="text-sm font-bold user-position">{student?.position}</p>
+                            <p className="text-sm w-[80%] user-position">{student?.position}</p>
                         </div>
                     ))}
                 </Marquee>
@@ -202,7 +202,7 @@ export default function Alumni() {
                                 <h4>{student.name}</h4>
                                 <a href={student?.linkedin} target="_blank"><img src="/images/linkedin.png" alt="linkedin" className="linkedin-img" /></a>
                             </div>
-                            <p className="text-sm font-bold user-position">{student?.position}</p>
+                            <p className="text-sm w-[80%] user-position">{student?.position}</p>
                         </div>
                     ))}
                 </Marquee>

@@ -250,7 +250,18 @@ Your program gave way more value. ❤️`,
         </div>
 
         <div className="slider--testim mt-10">
-          <div className="text-end pr-10 mb-5">
+          {/* <div className="text-end pr-10 mb-5"> */}
+          <motion.div
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+              delay: 0.7,
+            }}
+            className="text-end pr-10 mb-5"
+          >
             {Comments && (
               <a
                 href="https://drive.google.com/drive/folders/1bcPqmxKI5VywUSyen3Bw9tFjs47gttT_"
@@ -261,7 +272,7 @@ Your program gave way more value. ❤️`,
                 <img src="/images/light-arrow.png" alt="arrow" />
               </a>
             )}
-          </div>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, y: -40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -334,6 +345,6 @@ Your program gave way more value. ❤️`,
           </motion.div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
