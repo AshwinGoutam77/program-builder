@@ -28,6 +28,11 @@
     font-size: clamp(1rem, 0.7685rem + 1.2346vw, 2.25rem) !important;
 }
 
+#about-section li span.block {
+    font-size: 14px !important;
+    margin-top: 5px;
+}
+
 @media (max-width:767px) {
     .metric-box h4 {
         font-size: 24px;

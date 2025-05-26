@@ -8,15 +8,19 @@
     background-color: white;
     color: black;
     padding: 10px;
-    width: 260px;
-    height: 330px;
+    width: 230px;
+    height: 280px;
     margin-left: 20px;
 }
 
 .alumni-section .card img {
     width: 100%;
-    height: 220px;
+    height: 180px;
     object-fit: cover;
+}
+
+.alumni-section .card p{
+    font-size: 12px !important;
 }
 
 .linkedin-img {

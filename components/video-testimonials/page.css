@@ -1,6 +1,6 @@
 .testimonial-card {
   /* margin-left: calc(var(--spacing) * 4); */
-  width: 360px;
+  width: 300px;
   color: white;
   display: flex;
   flex-direction: column;

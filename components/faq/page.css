@@ -1,4 +1,4 @@
-.faq-section .tabs{
+.faq-section .tabs {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -14,16 +14,30 @@
     /* white-space: nowrap; */
 }
 
-.faq-section .accordion-div{
+.faq-section .accordion-div {
     height: fit-content;
+}
+
+
+.faq-section .accordion-div p {
+    margin-bottom: 10px;
+}
+
+.faq-section .accordion-div ul {
+    list-style: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
 }
 
 @media (max-width:767px) {
     .faq-section .tabs {
         overflow-x: auto;
-        justify-content:start;
+        justify-content: start;
     }
+
     .faq-section .tabs button {
-    white-space: nowrap;
-}
+        white-space: nowrap;
+    }
 }

@@ -139,6 +139,7 @@ export default function MasterSpeaker() {
                 ease: "easeOut",
                 delay: .8
             }}
+            id="master-speaker-section"
         >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 {/* Left Content */}

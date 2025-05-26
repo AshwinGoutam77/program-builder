@@ -121,10 +121,10 @@ export default function Header() {
                         <a href="#testimonials" className="text-sm/6 font-semibold text-white">
                             Testimonials
                         </a>
-                        <a href="#project-overview" className="text-sm/6 font-semibold text-white">
+                        <a href="#master-speaker-section" className="text-sm/6 font-semibold text-white">
                             Guest speakers
                         </a>
-                        <a href="#our-alumni" className="text-sm/6 font-semibold text-white">
+                        <a href="#sarvan-teaching" className="text-sm/6 font-semibold text-white">
                             Products
                         </a>
                         <a href="#sarvan-teaching" className="text-sm/6 font-semibold text-white">
