@@ -11,7 +11,7 @@ import './page.css'
 
 export default function CourseCurriculum() {
   return (
-    <section className="curriculam-section text-white p-6 md:p-12 flex justify-center items-center">
+    <section className="curriculam-section text-white p-6 md:p-12 flex justify-center items-center" id="curriculam">
       <div className="max-w-7xl w-full">
         <CourseSchedule />
       </div>

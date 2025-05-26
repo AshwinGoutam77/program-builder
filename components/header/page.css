@@ -53,4 +53,8 @@
   .header-menus {
     display: none;
   }
+
+  header {
+    padding: 0 16px !important;
+  }
 }

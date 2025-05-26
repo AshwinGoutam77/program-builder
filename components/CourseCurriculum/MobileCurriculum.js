@@ -16,7 +16,7 @@ const curriculumData = [
         label: "Live Theory Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-             
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">SATURDAY- 12PM IST</span>
@@ -49,7 +49,7 @@ const curriculumData = [
         label: "Live Lab Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-             
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">SATURDAY- 12PM IST</span>
@@ -91,7 +91,7 @@ const curriculumData = [
         label: "Live Theory Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-             
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">SUNDAY- 12PM IST</span>
@@ -126,7 +126,7 @@ const curriculumData = [
         label: "Live Lab Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-            
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">Sunday- 12PM IST</span>
@@ -164,7 +164,7 @@ const curriculumData = [
         label: "Live Theory Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-            
+
             <div>
               <ul>
                 <li>
@@ -193,7 +193,7 @@ const curriculumData = [
         label: "Live Lab Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-             
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">Sunday- 12PM IST</span>
@@ -233,7 +233,7 @@ const curriculumData = [
         label: "Live Theory Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-            
+
             <div>
               <ul>
                 <li>
@@ -263,7 +263,7 @@ const curriculumData = [
         label: "Live Lab Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-            
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">Sunday- 12PM IST</span>
@@ -302,7 +302,7 @@ const curriculumData = [
         label: "Live Theory Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-            
+
             <div>
               <ul>
                 <li>
@@ -331,7 +331,7 @@ const curriculumData = [
         label: "Live Lab Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-            
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">Sunday- 12PM IST</span>
@@ -371,12 +371,12 @@ const curriculumData = [
         label: "Live Theory Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-            
+
             <div>
               <ul>
                 <li>
                   <img src="/images/right-click.png" alt="icon" />
-                  What are Databases: Relational vs Non-Relational" Native vs
+                  What are Databases: Relational vs Non-Relational Native vs
                   Hybrid vs Progressive Web Apps. What to build?
                 </li>
                 <li>
@@ -401,7 +401,7 @@ const curriculumData = [
         label: "Live Lab Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-           
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">Sunday- 12PM IST</span>
@@ -441,7 +441,7 @@ const curriculumData = [
         label: "Live Theory Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-            
+
             <div>
               <ul>
                 <li>
@@ -470,7 +470,7 @@ const curriculumData = [
         label: "Live Lab Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-            
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">Sunday- 12PM IST</span>
@@ -510,16 +510,16 @@ const curriculumData = [
         label: "Live Theory Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-          
+
             <div>
               <ul>
                 <li>
                   <img src="/images/right-click.png" alt="icon" />
-                  Cracking Cold Outreach: Land Jobs via LinkedIn the Smart Way"
+                  Cracking Cold Outreach: Land Jobs via LinkedIn the Smart Way
                 </li>
                 <li>
                   <img src="/images/right-click.png" alt="icon" />
-                  "Your Brand is Your Resume Now- How to Build It Right"
+                  Your Brand is Your Resume Now- How to Build It Right
                 </li>
                 <li>
                   <img src="/images/right-click.png" alt="icon" />
@@ -539,7 +539,7 @@ const curriculumData = [
         label: "Live Lab Session",
         content: (
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6">
-           
+
             <div>
               <div className="flex gap-2">
                 <span className="badge">Sunday- 12PM IST</span>
@@ -602,9 +602,8 @@ export default function MobileCurriculum() {
               </div>
               <div className="flex items-center gap-2">
                 <ChevronDownIcon
-                  className={`h-4 w-4 transform transition-transform duration-200 ${
-                    openIndex === i ? "rotate-180" : ""
-                  } ${locked ? "opacity-50" : ""}`}
+                  className={`h-4 w-4 transform transition-transform duration-200 ${openIndex === i ? "rotate-180" : ""
+                    } ${locked ? "opacity-50" : ""}`}
                 />
               </div>
             </button>

@@ -93,7 +93,7 @@ export default function Header() {
                             <img src="/images/header-logo.png" alt="logo" />
                         </a>
                     </div>
-                    <div className="flex lg:hidden">
+                    <div className="flex xl:hidden">
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(true)}
@@ -104,17 +104,18 @@ export default function Header() {
                         </button>
                     </div>
 
-                    <div className="hidden lg:flex items-center lg:flex-1 lg:justify-end gap-5">
-                        <a href="#about-section" className="text-sm/6 font-semibold text-white">
+                    <div className="hidden xl:flex items-center xl:flex-1 xl:justify-end gap-5">
+
+                        <a href="#" className="text-sm/6 font-semibold text-white">
                             Home
                         </a>
-                        <a href="#project-overview" className="text-sm/6 font-semibold text-white">
+                        <a href="#" className="text-sm/6 font-semibold text-white">
                             For You?
                         </a>
-                        <a href="#our-alumni" className="text-sm/6 font-semibold text-white">
+                        <a href="#project-overview" className="text-sm/6 font-semibold text-white">
                             Program overview
                         </a>
-                        <a href="#sarvan-teaching" className="text-sm/6 font-semibold text-white">
+                        <a href="#curriculam" className="text-sm/6 font-semibold text-white">
                             Curriculum
                         </a>
                         <a href="#about-section" className="text-sm/6 font-semibold text-white">
@@ -139,7 +140,7 @@ export default function Header() {
                 </nav>
                 <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
                     <div className="fixed inset-0 z-10" />
-                    <DialogPanel className="sidebar fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <DialogPanel className="sidebar fixed text-white inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#171717] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <img src="/images/header-logo.png" alt="logo" />
@@ -159,25 +160,25 @@ export default function Header() {
                                     <a href=""></a>
                                     <a
                                         href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
                                     >
                                         About us
                                     </a>
                                     <a
                                         href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
                                     >
                                         Program Overview
                                     </a>
                                     <a
                                         href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
                                     >
                                         Our Alumni
                                     </a>
                                     <a
                                         href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
                                     >
                                         Sarvan Teaches
                                     </a>
