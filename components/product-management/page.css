@@ -123,6 +123,13 @@
   color: black;
   font-weight: 600;
   text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 8px;
+  transition: 0.3s;
+}
+
+.pm-cards a:hover{
+  gap: 16px;
 }
 
 .read-now-btn {
@@ -157,11 +164,11 @@
   }
 
   .pm-cards .card:first-child{
-    height: 376px;
+    height: 400px;
   }
 
   .pm-cards .card:nth-child(2){
-    height: 362px;
+    height: 377px;
   }
 }
 

@@ -3,10 +3,10 @@
 .master-speaker-section {
     padding-left: 6% !important;
     color: white;
-    /* background-image: url('../../public/images/project-overview-bg.png');
+    background-image: url('../../public/images/project-overview-bg.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
 }
 
 .master-speaker-section .card {

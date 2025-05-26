@@ -5,9 +5,11 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 import { PlayCircleIcon, PlayIcon } from "@heroicons/react/24/outline";
 import "./page.css";
 import { motion } from "framer-motion";
+import YouTubeModal from "../about-us/youtubeModal";
 
 export default function VideoTestimonialSlider() {
   const AUTOPLAY_INTERVAL = 3000;
+  const [isHovered, setIsHovered] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
@@ -17,6 +19,8 @@ export default function VideoTestimonialSlider() {
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [VideoLink, setVideoLink] = useState("");
+  const [showModal, setShowModal] = useState("")
 
   const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
@@ -35,16 +39,18 @@ export default function VideoTestimonialSlider() {
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
 
-  // ✅ Auto-play Effect
   useEffect(() => {
     if (!emblaApi) return;
 
     const interval = setInterval(() => {
-      emblaApi.scrollNext();
+      if (!isHovered) {
+        emblaApi.scrollNext();
+      }
     }, AUTOPLAY_INTERVAL);
 
-    return () => clearInterval(interval); // Clear on unmount or emblaApi change
-  }, [emblaApi]);
+    return () => clearInterval(interval);
+  }, [emblaApi, isHovered]);
+
   const testimonials = [
     {
       id: 1,
@@ -81,8 +87,8 @@ export default function VideoTestimonialSlider() {
   ]
 
   return (
-    <motion.div
-      className="w-full text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden"
+    <motion.section
+      className="w-full text-white overflow-hidden"
       initial={{ opacity: 0, y: -40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
@@ -110,24 +116,25 @@ export default function VideoTestimonialSlider() {
 
           {/* Right Content - Testimonial Slider */}
           <div className="video-card-section lg:col-span-8 relative">
-            <div className="overflow-hidden" ref={emblaRef}>
+            <div className="overflow-hidden" ref={emblaRef} onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}>
               <div className="flex">
                 {testimonials.map((testimonial) => (
                   <div
                     key={testimonial.id}
                     className="pl-4"
                   >
-                    <div className="bg-gray-900 h-100  w-[300px] testimonial-card shrink-0 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/30">
+                    <div className="testimonial-card"
+                      onClick={() => {
+                        setShowModal(true);
+                        setVideoLink(
+                          "https://www.youtube.com/embed/cuH1EpGIkDo?si=uCnhepXGtm06zyK-"
+                        );
+                      }}>
                       <div className="relative">
-                        <div className="aspect-square">
-                          <img
-                            src={testimonial.image || "/placeholder.svg"}
-                            alt="Testimonial"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
+                        <img src="/images/video-thumbnails.jpg" alt="img" />
                         <button
-                          className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                          className="cursor-pointer absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
                           aria-label="Play video"
                         >
                           <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
@@ -149,11 +156,11 @@ export default function VideoTestimonialSlider() {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="flex justify-end mt-6 space-x-2">
+            <div className="flex justify-end mt-6 space-x-2 mr-10">
               <button
                 className={`p-2 rounded-full border border-white/20 ${!prevBtnEnabled
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-white/10"
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-white/10"
                   }`}
                 onClick={scrollPrev}
                 disabled={!prevBtnEnabled}
@@ -163,8 +170,8 @@ export default function VideoTestimonialSlider() {
               </button>
               <button
                 className={`p-2 rounded-full border border-white/20 ${!nextBtnEnabled
-                    ? "opacity-50 cursor-not-allowed"
-                    : "hover:bg-white/10"
+                  ? "opacity-50 cursor-not-allowed"
+                  : "hover:bg-white/10"
                   }`}
                 onClick={scrollNext}
                 disabled={!nextBtnEnabled}
@@ -176,6 +183,11 @@ export default function VideoTestimonialSlider() {
           </div>
         </div>
       </div>
-    </motion.div>
+      <YouTubeModal
+        show={showModal}
+        onClose={() => setShowModal(false)}
+        VideoLink={VideoLink}
+      />
+    </motion.section>
   );
 }

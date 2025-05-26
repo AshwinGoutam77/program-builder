@@ -34,7 +34,7 @@
     right: -23px;
 }
 
-.logos-cloud-section{
+.logos-cloud-section {
     margin-bottom: 0px !important;
 }
 
@@ -63,7 +63,7 @@
     font-size: 14px;
 }
 
-.banner-section .banner-img{
+.banner-section .banner-img {
     width: 90%;
 }
 
@@ -75,5 +75,27 @@
 
     .banner-section {
         margin-top: 0 !important;
+    }
+
+    .overlap-div-1 h4,
+    .overlap-div-2 h4 {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .overlap-div-1 p,
+    .overlap-div-2 p {
+        font-size: 12px !important;
+    }
+
+    .overlap-div-1 {
+        padding: 6px 16px 8px 18px;
+        top: 30%;
+        right: 0px;
+    }
+
+    .banner-section p{
+        font-size: 12px !important;
     }
 }

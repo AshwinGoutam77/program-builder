@@ -167,7 +167,7 @@ export default function AboutUs() {
                                 </button>
                                 <a
                                     href='#sarvan-teaching'
-                                    className="secondary-btn"
+                                    className="text-white text-md underline"
                                 >
                                     View Shravans’ Teaching videos
                                 </a>

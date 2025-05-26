@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+ .case-study-section .rounded-xl.overflow-hidden img{
+  border-radius: 10px;
+ }
+
 .overview-tabs-section button {
   background-color: transparent;
   border: none;
@@ -40,9 +44,9 @@
   gap: 10px;
 }
 
-.important-section h2{
-    padding-left: 20px !important;
-    line-height: normal !important;
+.important-section h2 {
+  padding-left: 20px !important;
+  line-height: normal !important;
 }
 
 .case-study-section {
@@ -63,4 +67,15 @@
   align-items: start;
   gap: 10px;
   font-size: 14px;
+}
+
+
+@media (max-width:768px) {
+  .case-study-section .rounded-xl.overflow-hidden {
+    padding: 0 30px;
+  }
+
+  .important-section ul li{
+    font-size: 13px !important;
+  }
 }

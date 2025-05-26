@@ -10,7 +10,7 @@ export default function MasterSpeaker() {
             image: "/images/master-session-img-1.png",
             title: "Matthew Arbesfeld",
             desc: "Co-founder at LogRocket and Thiel Fellow",
-            link: "https://aiondemand.in/",
+            link: "/",
             logo: [
                 '/images/log-rocket.png',
                 '/images/mit.png',
@@ -21,7 +21,7 @@ export default function MasterSpeaker() {
             image: "/images/master-session-img-2.png",
             title: "Stefan F. Schnabl",
             desc: "Senior Product Manager at Google",
-            link: "https://aiondemand.in/",
+            link: "/",
             logo: [
                 '/images/google.png',
                 '/images/ibm.png',
@@ -32,7 +32,7 @@ export default function MasterSpeaker() {
             image: "/images/master-session-img-3.png",
             title: "Sushant Mathur",
             desc: "Director of Product, Sabre India",
-            link: "https://aiondemand.in/",
+            link: "/",
             logo: [
                 '/images/sabre.png',
                 '/images/oracle.png',
@@ -43,7 +43,7 @@ export default function MasterSpeaker() {
             image: "/images/master-session-img-4.png",
             title: "Claire Vo",
             desc: "CPO LaunchDarkly, Co-founder, ChatPRD",
-            link: "https://aiondemand.in/",
+            link: "/",
             logo: [
                 '/images/launchdarkly.png',
             ],
@@ -53,7 +53,7 @@ export default function MasterSpeaker() {
             image: "/images/master-session-img-5.png",
             title: "Aakash Gupta",
             desc: "Founder of Product Growth Newsletter",
-            link: "https://aiondemand.in/",
+            link: "/",
             logo: [
                 '/images/apollo.png',
                 '/images/epic.png',
@@ -64,7 +64,7 @@ export default function MasterSpeaker() {
             image: "/images/master-session-img-6.png",
             title: "Dhilip K",
             desc: "Global Alliance Leader, Adobe",
-            link: "https://aiondemand.in/",
+            link: "/",
             logo: [
                 '/images/adobe.png',
             ],
@@ -74,7 +74,7 @@ export default function MasterSpeaker() {
             image: "/images/master-session-img-7.png",
             title: "Ravi Karthik",
             desc: "CMO, ACT Fibrenet",
-            link: "https://aiondemand.in/",
+            link: "/",
             logo: [
                 '/images/act.png',
                 '/images/f.png',
@@ -86,7 +86,7 @@ export default function MasterSpeaker() {
             image: "/images/master-session-img-8.png",
             title: "Rachna Rao",
             desc: "Senior Director of Product, Scopely",
-            link: "https://aiondemand.in/",
+            link: "/",
             logo: [
                 '/images/scopely.png',
                 '/images/zynga.png',
@@ -97,7 +97,7 @@ export default function MasterSpeaker() {
             image: "/images/master-session-img-9.png",
             title: "Pawan Muralidhar",
             desc: "VP Product, Freight Tiger",
-            link: "https://aiondemand.in/",
+            link: "/",
             logo: [
                 '/images/tiger.png',
                 '/images/grab.png',
@@ -140,10 +140,9 @@ export default function MasterSpeaker() {
                 delay: .8
             }}
         >
-            <div className="">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    {/* Left Content */}
-                    <div className="lg:col-span-4 pt-10" >
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                {/* Left Content */}
+                <div className="lg:col-span-4 pt-10" >
                     <div className="space-y-6">
                         <h2 className="text-3xl md:text-4xl font-bold leading-tight">Master Speaker Sessions</h2>
                         <p className="flex items-start gap-2"><img src="../../images/right-click.png" alt="arrow" className="mt-1" /> Every two weeks, we bring in 3–4 industry leaders</p>
@@ -181,7 +180,6 @@ export default function MasterSpeaker() {
                     </div>
                 </div>
             </div>
-        </div>
         </motion.section >
     )
 } 

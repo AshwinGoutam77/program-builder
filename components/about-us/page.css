@@ -24,7 +24,7 @@
     font-weight: 300;
 }
 
-.sarvan-heading span{
+.sarvan-heading span {
     font-size: clamp(1rem, 0.7685rem + 1.2346vw, 2.25rem) !important;
 }
 
@@ -36,19 +36,27 @@
     .metric-box h4 span {
         font-size: 24px;
     }
+
+    .metric-box {
+        gap: 10px;
+    }
+
+    #about-section img {
+        height: ;
+    }
 }
- 
+
 
 @media (max-width:350px) {
-   .metric-box{
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-   }
-   .metric-box div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .metric-box {
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .metric-box div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
-}
- 
