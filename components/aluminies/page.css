@@ -33,3 +33,9 @@
 .alumni-section .user-position {
     font-size: 14px !important;
 }
+
+@media (max-width:768px) {
+    .alumni-section .card {
+        width: 230px;
+    }
+}

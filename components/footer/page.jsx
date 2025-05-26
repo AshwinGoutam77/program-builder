@@ -34,16 +34,16 @@ export default function Footer() {
                     <div>
                         <ul className="mt-8 space-y-4">
                             <li>
-                                <a href="#" title="" className="text-base text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Privacy Policy </a>
+                                <a href="https://rethinksystems.in/privacy-policy" target='_blank' title="" className="text-base text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Privacy Policy </a>
                             </li>
                             <li>
-                                <a href="#" title="" className="text-base text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Terms & Conditions </a>
+                                <a href="https://rethinksystems.in/terms-and-conditions" title="" target='_blank' className="text-base text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Terms & Conditions </a>
                             </li>
                             <li>
-                                <a href="#" title="" className="text-base text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Community Guidelines </a>
+                                <a href="https://rethinksystems.in/community-guidelines" title="" target='_blank' className="text-base text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Community Guidelines </a>
                             </li>
                             <li>
-                                <a href="#" title="" className="text-base text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Refund Policy </a>
+                                <a href="https://rethinksystems.in/refund-policy" title="" target='_blank' className="text-base text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Refund Policy </a>
                             </li>
                         </ul>
                     </div>
@@ -66,7 +66,7 @@ export default function Footer() {
                 <hr className="mt-16 border-0" />
 
                 <div className="flex flex-wrap items-center justify-between">
-                     <ul className="flex items-center space-x-3 md:order-3">
+                    <ul className="flex items-center space-x-3 md:order-3">
                         <li>
                             <a href="#" title="" className="flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-700 rounded-full w-7 h-7 focus:bg-blue-600 hover:bg-blue-600 hover:border-blue-600 focus:border-blue-600">
                                 <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

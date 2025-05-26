@@ -86,9 +86,9 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-            <header className="container mx-auto">
+            <header className="w-full px-10 mx-auto">
                 <nav aria-label="Global" className="flex items-center justify-between py-6">
-                    <div className="flex lg:flex-1">
+                    <div className="flex">
                         <a href="#" className="">
                             <img src="/images/header-logo.png" alt="logo" />
                         </a>
@@ -104,24 +104,36 @@ export default function Header() {
                         </button>
                     </div>
 
-                    <div className='header-menus flex gap-10'>
+                    <div className="hidden lg:flex items-center lg:flex-1 lg:justify-end gap-5">
                         <a href="#about-section" className="text-sm/6 font-semibold text-white">
-                            About Us
+                            Home
                         </a>
                         <a href="#project-overview" className="text-sm/6 font-semibold text-white">
-                            Program Overview
+                            For You?
                         </a>
                         <a href="#our-alumni" className="text-sm/6 font-semibold text-white">
-                            Our Alumni
+                            Program overview
                         </a>
                         <a href="#sarvan-teaching" className="text-sm/6 font-semibold text-white">
-                            Shravan Teaches
+                            Curriculum
                         </a>
-                    </div>
-
-                    <div className="hidden lg:flex items-center lg:flex-1 lg:justify-end gap-5">
+                        <a href="#about-section" className="text-sm/6 font-semibold text-white">
+                            Testimonials
+                        </a>
+                        <a href="#project-overview" className="text-sm/6 font-semibold text-white">
+                            Guest speakers
+                        </a>
+                        <a href="#our-alumni" className="text-sm/6 font-semibold text-white">
+                            Products
+                        </a>
+                        <a href="#sarvan-teaching" className="text-sm/6 font-semibold text-white">
+                            Pricing
+                        </a>
+                        <a href="#sarvan-teaching" className="text-sm/6 font-semibold text-white">
+                            Contact
+                        </a>
                         <a href="#" className="primary-btn">
-                            Contact Us
+                            Apply Now
                         </a>
                     </div>
                 </nav>

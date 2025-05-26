@@ -49,6 +49,16 @@
     font-size: 12px !important;
 }
 
-.launch-by-alumni-section .rfm-marquee-container{
+.launch-by-alumni-section .rfm-marquee-container {
     padding: 40px 0;
+}
+
+@media (max-width:768px) {
+    .launch-by-alumni-section .card span {
+        display: none;
+    }
+
+    .launch-by-alumni-section .card {
+        width: 260px;
+    }
 }
