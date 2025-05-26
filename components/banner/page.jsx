@@ -47,14 +47,14 @@ export default function Banner() {
                             </div>
                         </div>
 
-                        <div className="relative">
+                        <div className="relative w-fit mx-auto">
                             <div className="overlap-div-1 backdrop-blur-lg">
                                 <h4>10K</h4>
                                 <p>
                                     Learners <span className="block">Impacted</span>
                                 </p>
                             </div>
-                            <img src="../../images/sarvan's-image.png" alt="" />
+                            <img src="../../images/sarvan's-image.png" alt="banner-1" className="banner-img" />
                             <div className="overlap-div-2 backdrop-blur-lg">
                                 <h4>500+</h4>
                                 <p>PM Offers</p>
@@ -98,9 +98,9 @@ export default function Banner() {
                                     alt="Logo 3"
                                 />
                             </div>
-                            <div>
+                            <div className="m-auto pt-4">
                                 <img
-                                    className="object-contain w-full mx-auto h-24"
+                                    className="object-contain w-full mx-auto h-10"
                                     src="/images/logo-4.png"
                                     alt="Logo 4"
                                 />

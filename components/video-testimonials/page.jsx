@@ -7,6 +7,7 @@ import "./page.css";
 import { motion } from "framer-motion";
 
 export default function VideoTestimonialSlider() {
+  const AUTOPLAY_INTERVAL = 3000;
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
@@ -17,14 +18,8 @@ export default function VideoTestimonialSlider() {
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const scrollPrev = useCallback(
-    () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
-  );
-  const scrollNext = useCallback(
-    () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
-  );
+  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -40,6 +35,16 @@ export default function VideoTestimonialSlider() {
     emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
 
+  // ✅ Auto-play Effect
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const interval = setInterval(() => {
+      emblaApi.scrollNext();
+    }, AUTOPLAY_INTERVAL);
+
+    return () => clearInterval(interval); // Clear on unmount or emblaApi change
+  }, [emblaApi]);
   const testimonials = [
     {
       id: 1,
@@ -47,7 +52,7 @@ export default function VideoTestimonialSlider() {
       description: "Founder at LifeBro",
       image: "/images/students.png",
       videoUrl: "#",
-      exp: "19+ Years of Experience",
+      exp: "19+ Years of Experience"
     },
     {
       id: 2,
@@ -55,7 +60,7 @@ export default function VideoTestimonialSlider() {
       description: "Founder at LifeBro",
       image: "/images/students.png",
       videoUrl: "#",
-      exp: "19+ Years of Experience",
+      exp: "19+ Years of Experience"
     },
     {
       id: 3,
@@ -63,7 +68,7 @@ export default function VideoTestimonialSlider() {
       description: "Founder at LifeBro",
       image: "/images/students.png",
       videoUrl: "#",
-      exp: "19+ Years of Experience",
+      exp: "19+ Years of Experience"
     },
     {
       id: 4,
@@ -71,9 +76,9 @@ export default function VideoTestimonialSlider() {
       description: "Founder at LifeBro",
       image: "/images/students.png",
       videoUrl: "#",
-      exp: "19+ Years of Experience",
+      exp: "19+ Years of Experience"
     },
-  ];
+  ]
 
   return (
     <motion.div
@@ -87,13 +92,13 @@ export default function VideoTestimonialSlider() {
         delay: 0.7,
       }}
     >
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div className="container mx-auto students-section">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Content */}
           <div className="lg:col-span-4">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                Hear from our Students!
+              <h2 className="leading-tight">
+                Hear from <span className="block">our Students!</span>
               </h2>
               <p>
                 Real voices. Real journeys. Real impact. It’s stories from those
@@ -104,14 +109,17 @@ export default function VideoTestimonialSlider() {
           </div>
 
           {/* Right Content - Testimonial Slider */}
-          <div className="lg:col-span-8 relative">
+          <div className="video-card-section lg:col-span-8 relative">
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex">
                 {testimonials.map((testimonial) => (
-                  <div key={testimonial.id} className="pl-4 first:pl-0">
+                  <div
+                    key={testimonial.id}
+                    className="pl-4"
+                  >
                     <div className="bg-gray-900 h-100  w-[300px] testimonial-card shrink-0 rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-900/30">
                       <div className="relative">
-                        <div className="bg-[#0E8A7B] aspect-square">
+                        <div className="aspect-square">
                           <img
                             src={testimonial.image || "/placeholder.svg"}
                             alt="Testimonial"
@@ -129,16 +137,10 @@ export default function VideoTestimonialSlider() {
                       </div>
                       <div className="flex items-center justify-between p-5">
                         <div className="w-full">
-                          <h3 className="font-semibold text-lg">
-                            {testimonial.title}
-                          </h3>
-                          <p className="text-gray-400 text-sm mt-1">
-                            {testimonial.description}
-                          </p>
+                          <h3 className="font-semibold text-lg">{testimonial.title}</h3>
+                          <p className="text-gray-400 text-sm mt-1">{testimonial.description}</p>
                         </div>
-                        <p className="text-gray-400 text-sm text-end">
-                          {testimonial?.exp}
-                        </p>
+                        <p className="text-gray-400 text-sm text-end">{testimonial?.exp}</p>
                       </div>
                     </div>
                   </div>
@@ -149,11 +151,10 @@ export default function VideoTestimonialSlider() {
             {/* Navigation Buttons */}
             <div className="flex justify-end mt-6 space-x-2">
               <button
-                className={`p-2 rounded-full border border-white/20 ${
-                  !prevBtnEnabled
+                className={`p-2 rounded-full border border-white/20 ${!prevBtnEnabled
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:bg-white/10"
-                }`}
+                  }`}
                 onClick={scrollPrev}
                 disabled={!prevBtnEnabled}
                 aria-label="Previous slide"
@@ -161,11 +162,10 @@ export default function VideoTestimonialSlider() {
                 <ChevronLeftIcon className="h-5 w-5" />
               </button>
               <button
-                className={`p-2 rounded-full border border-white/20 ${
-                  !nextBtnEnabled
+                className={`p-2 rounded-full border border-white/20 ${!nextBtnEnabled
                     ? "opacity-50 cursor-not-allowed"
                     : "hover:bg-white/10"
-                }`}
+                  }`}
                 onClick={scrollNext}
                 disabled={!nextBtnEnabled}
                 aria-label="Next slide"

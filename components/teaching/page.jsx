@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./page.css";
 import YouTubeModal from "../about-us/youtubeModal";
 import { motion } from "framer-motion";
+import { PlayIcon } from "@heroicons/react/24/outline";
 
 export default function Teaching() {
   const [showModal, setShowModal] = useState(false);
@@ -17,6 +18,7 @@ export default function Teaching() {
             <h4>Career advice</h4>
             <div className="grid md:grid-cols-2 gap-10">
               <div
+                className="relative"
                 onClick={() => {
                   setShowModal(true);
                   setVideoLink(
@@ -24,9 +26,18 @@ export default function Teaching() {
                   );
                 }}
               >
+                <button
+                  className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                  aria-label="Play video"
+                >
+                  <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <PlayIcon className="h-6 w-6 text-white fill-white" />
+                  </div>
+                </button>
                 <img src="/images/video-thumbnail-1.png" alt="video" />
               </div>
               <div
+                className="relative"
                 onClick={() => {
                   setShowModal(true);
                   setVideoLink(
@@ -34,6 +45,14 @@ export default function Teaching() {
                   );
                 }}
               >
+                <button
+                  className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                  aria-label="Play video"
+                >
+                  <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <PlayIcon className="h-6 w-6 text-white fill-white" />
+                  </div>
+                </button>
                 <img src="/images/video-thumbnail-2.png" alt="video" />
               </div>
             </div>
@@ -61,7 +80,17 @@ export default function Teaching() {
                   );
                 }}
               >
-                <img src="/images/video-thumbnail-3.png" alt="video" />
+                <div className="relative">
+                  <button
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                    aria-label="Play video"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <PlayIcon className="h-6 w-6 text-white fill-white" />
+                    </div>
+                  </button>
+                  <img src="/images/video-thumbnail-3.png" alt="video" />
+                </div>
                 <h5>Gen AI & LLM’s for Product Managers</h5>
               </div>
               <div
@@ -72,7 +101,17 @@ export default function Teaching() {
                   );
                 }}
               >
-                <img src="/images/video-thumbnail-4.png" alt="video" />
+                <div className="relative">
+                  <button
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                    aria-label="Play video"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <PlayIcon className="h-6 w-6 text-white fill-white" />
+                    </div>
+                  </button>
+                  <img src="/images/video-thumbnail-4.png" alt="video" />
+                </div>
                 <h5>
                   System Dynamics for PM’s. How to build Large Scale Systems?
                 </h5>
@@ -85,7 +124,17 @@ export default function Teaching() {
                   );
                 }}
               >
-                <img src="/images/video-thumbnail-5.png" alt="video" />
+                <div className="relative">
+                  <button
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                    aria-label="Play video"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <PlayIcon className="h-6 w-6 text-white fill-white" />
+                    </div>
+                  </button>
+                  <img src="/images/video-thumbnail-5.png" alt="video" />
+                </div>
                 <h5>System Design for PM’s explained through Spotify.</h5>
               </div>
               <div
@@ -96,7 +145,17 @@ export default function Teaching() {
                   );
                 }}
               >
-                <img src="/images/video-thumbnail-6.png" alt="video" />
+                 <div className="relative">
+                  <button
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                    aria-label="Play video"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <PlayIcon className="h-6 w-6 text-white fill-white" />
+                    </div>
+                  </button>
+                  <img src="/images/video-thumbnail-6.png" alt="video" />
+                </div>
                 <h5>How to Break into Product Management?</h5>
               </div>
             </div>
@@ -124,7 +183,17 @@ export default function Teaching() {
                 );
               }}
             >
-              <img src="/images/video-thumbnail-7.png" alt="video" />
+               <div className="relative">
+                  <button
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                    aria-label="Play video"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <PlayIcon className="h-6 w-6 text-white fill-white" />
+                    </div>
+                  </button>
+                  <img src="/images/video-thumbnail-7.png" alt="video" />
+                </div>
               <h5>
                 How Matt Built Log Rocket, A Product That Is Used By 3,500+
                 Companies?{" "}
@@ -138,7 +207,17 @@ export default function Teaching() {
                 );
               }}
             >
-              <img src="/images/video-thumbnail-8.png" alt="video" />
+               <div className="relative">
+                  <button
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                    aria-label="Play video"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <PlayIcon className="h-6 w-6 text-white fill-white" />
+                    </div>
+                  </button>
+                  <img src="/images/video-thumbnail-8.png" alt="video" />
+                </div>
               <h5>
                 Product Cultures, Switching Jobs, Product Manager Mindset :
                 Diving Deep with Adobe's Group PM Dhilip
@@ -152,7 +231,17 @@ export default function Teaching() {
                 );
               }}
             >
-              <img src="/images/video-thumbnail-9.png" alt="video" />
+               <div className="relative">
+                  <button
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                    aria-label="Play video"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <PlayIcon className="h-6 w-6 text-white fill-white" />
+                    </div>
+                  </button>
+                  <img src="/images/video-thumbnail-9.png" alt="video" />
+                </div>
               <h5>
                 Product Cultures, Switching Jobs, Product Manager Mindset :
                 Diving Deep with Adobe's Group PM Dhilip
@@ -166,7 +255,17 @@ export default function Teaching() {
                 );
               }}
             >
-              <img src="/images/video-thumbnail-10.png" alt="video" />
+               <div className="relative">
+                  <button
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:opacity-100 transition-opacity"
+                    aria-label="Play video"
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <PlayIcon className="h-6 w-6 text-white fill-white" />
+                    </div>
+                  </button>
+                  <img src="/images/video-thumbnail-10.png" alt="video" />
+                </div>
               <h5>
                 Become a Better Product Manager, Make wise career switch with
                 Aakash Gupta ( Product Growth Guy)

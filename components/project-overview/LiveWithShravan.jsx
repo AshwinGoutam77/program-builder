@@ -3,8 +3,9 @@ import VideoThumbnail from "./VideoThumbnail";
 import { motion } from "framer-motion";
 const LiveWithShravan = ({ data }) => {
   return (
+    // <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[40%_60%] gap-10 items-center"></div>
     <motion.div
-      className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[60%_40%] gap-10 items-start"
       initial={{ opacity: 0, y: -40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
@@ -13,10 +14,10 @@ const LiveWithShravan = ({ data }) => {
         ease: "easeOut",
       }}
     >
-      <div className="space-y-6">
-        <h3 className="text-2xl md:text-3xl text-white font-bold">
+      <div className="space-y-10 lg:w-[80%]">
+        <h2 className="">
           Live with Shravan
-        </h3>
+        </h2>
 
         <ul className="space-y-4">
           {data?.map((point, i) => (
@@ -45,7 +46,7 @@ const BulletPoint = ({ text }) => {
   return (
     <li className="flex items-start gap-2">
       <img src="/images/right-click.png" alt="bullet icon" className="mt-1" />
-      <span className="text-gray-200">{text}</span>
+      <span className="text-gray-200 text-lg">{text}</span>
     </li>
   );
 };

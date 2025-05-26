@@ -9,18 +9,18 @@
     color: black;
     padding: 10px;
     width: 260px;
-    height: 350px;
+    height: 330px;
     margin-left: 20px;
 }
 
 .alumni-section .card img {
     width: 100%;
-    height: 240px;
+    height: 220px;
     object-fit: cover;
 }
 
 .linkedin-img {
-    width: auto !important;
+    width: 30px !important;
     height: auto !important;
 }
 

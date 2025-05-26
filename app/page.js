@@ -21,6 +21,7 @@ import VideoTestimonialSlider from "@/components/video-testimonials/page";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SuperSpecial from "@/components/superSpecial/page";
+import MasterSpeaker from "@/components/master-speaker/page";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
       <CourseCurriculum />
       <SuperSpecial />
       <LaunchByAlumni />
+      <MasterSpeaker />
       <Network />
       <Alumni />
       <VideoSlider />
