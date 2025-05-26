@@ -76,6 +76,11 @@ const curriculumData = [
                   analyze, and ship from Week 2 onward.
                 </li>
               </ul>
+              <div className="flex items-center gap-5 mt-5 pt-4 border-t border-indigo-800/30">
+              <PartnerLogos logo={"/images/zepto.png"} />
+              <PartnerLogos logo={"/images/notbook.png"} />
+              <PartnerLogos logo={"/images/perplexity.png"} />
+            </div>
             </div>
           </div>
         ),
@@ -149,6 +154,11 @@ const curriculumData = [
                   blitz
                 </li>
               </ul>
+              <div className="flex items-center gap-5 mt-5 pt-4 border-t border-indigo-800/30">
+              <PartnerLogos logo={"/images/zepto.png"} />
+              <PartnerLogos logo={"/images/notbook.png"} />
+              <PartnerLogos logo={"/images/perplexity.png"} />
+            </div>
             </div>
           </div>
         ),
@@ -218,6 +228,11 @@ const curriculumData = [
                   power India’s next 100 million streamers.
                 </li>
               </ul>
+              <div className="flex items-center gap-5 mt-5 pt-4 border-t border-indigo-800/30">
+              <PartnerLogos logo={"/images/zepto.png"} />
+              <PartnerLogos logo={"/images/notbook.png"} />
+              <PartnerLogos logo={"/images/perplexity.png"} />
+            </div>
             </div>
           </div>
         ),
@@ -287,6 +302,12 @@ const curriculumData = [
                   what’s not, and where to double down.
                 </li>
               </ul>
+
+              <div className="flex items-center gap-5 mt-5 pt-4 border-t border-indigo-800/30">
+              <PartnerLogos logo={"/images/zepto.png"} />
+              <PartnerLogos logo={"/images/notbook.png"} />
+              <PartnerLogos logo={"/images/perplexity.png"} />
+            </div>
             </div>
           </div>
         ),
@@ -356,6 +377,11 @@ const curriculumData = [
                   designed to power Swiggy’s next stage of Instamart growth.
                 </li>
               </ul>
+              <div className="flex items-center gap-5 mt-5 pt-4 border-t border-indigo-800/30">
+              <PartnerLogos logo={"/images/zepto.png"} />
+              <PartnerLogos logo={"/images/notbook.png"} />
+              <PartnerLogos logo={"/images/perplexity.png"} />
+            </div>
             </div>
           </div>
         ),
@@ -426,6 +452,11 @@ const curriculumData = [
                   PM sidekick inside Jira.
                 </li>
               </ul>
+              <div className="flex items-center gap-5 mt-5 pt-4 border-t border-indigo-800/30">
+              <PartnerLogos logo={"/images/zepto.png"} />
+              <PartnerLogos logo={"/images/notbook.png"} />
+              <PartnerLogos logo={"/images/perplexity.png"} />
+            </div>
             </div>
           </div>
         ),
@@ -495,6 +526,11 @@ const curriculumData = [
                   idea to crisp PRD in minutes, not hours.
                 </li>
               </ul>
+              <div className="flex items-center gap-5 mt-5 pt-4 border-t border-indigo-800/30">
+              <PartnerLogos logo={"/images/zepto.png"} />
+              <PartnerLogos logo={"/images/notbook.png"} />
+              <PartnerLogos logo={"/images/perplexity.png"} />
+            </div>
             </div>
           </div>
         ),
@@ -562,8 +598,13 @@ const curriculumData = [
                   Outcome: A smart outreach tool that helps you stand out in
                   crowded inboxes and start real conversations with the right
                   people.100-city blitz
-                </li>
+                </li>  
               </ul>
+              <div className="flex items-center gap-5 mt-5 pt-4 border-t border-indigo-800/30">
+              <PartnerLogos logo={"/images/zepto.png"} />
+              <PartnerLogos logo={"/images/notbook.png"} />
+              <PartnerLogos logo={"/images/perplexity.png"} />
+            </div>
             </div>
           </div>
         ),
@@ -627,8 +668,7 @@ export default function MobileCurriculum() {
               </div>
             )}
           </motion.div>
-        ))}
-        <PartnerLogos />
+        ))} 
       </div>
     </div>
   );

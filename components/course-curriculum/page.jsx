@@ -7,11 +7,14 @@ import { PartnerLogos } from "../CourseCurriculum/PartnerLogos";
 import { useState } from "react";
 import MobileCurriculum from "../CourseCurriculum/MobileCurriculum";
 import { delay, motion } from "framer-motion";
-import './page.css'
+import "./page.css";
 
 export default function CourseCurriculum() {
   return (
-    <section className="curriculam-section text-white p-6 md:p-12 flex justify-center items-center" id="curriculam">
+    <section
+      className="curriculam-section text-white p-6 md:p-12 flex justify-center items-center"
+      id="curriculam"
+    >
       <div className="container mx-auto">
         <CourseSchedule />
       </div>
@@ -189,12 +192,11 @@ function CourseSchedule() {
         <h1 className="text-4xl font-bold mb-2">What will you learn?</h1>
         <p className="text-sm text-gray-400">
           Build real products, become a systems thinker and master the Product
-          mindset <span className="block">-all with AI by your side.</span>
+          mindset-all <span className="block"> with AI by your side.</span>
         </p>
       </motion.div>
       <div className="block md:hidden ">
         <MobileCurriculum />
-        
       </div>
       <div className="md:grid md:grid-cols-12 gap-6 hidden">
         <div className="md:col-span-4 space-y-4">
@@ -212,7 +214,11 @@ function CourseSchedule() {
           <div className="rounded-xl p-6 border border-indigo-800/30 backdrop-blur-sm space-y-8 h-full">
             <SessionTheory content={weekContent[activeWeek].theory} />
             <SessionLab content={weekContent[activeWeek].lab} />
-            <PartnerLogos />
+            <div className="flex items-center gap-5  pt-4 border-t border-indigo-800/30">
+              <PartnerLogos logo={"/images/zepto.png"} />
+              <PartnerLogos logo={"/images/notbook.png"} />
+              <PartnerLogos logo={"/images/perplexity.png"} />
+            </div>
           </div>
         </div>
       </div>

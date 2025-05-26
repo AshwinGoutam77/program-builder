@@ -2,10 +2,19 @@
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import './page.css';
 import { motion } from "framer-motion";
+import { useState } from "react";
+import PopUp from "../Popup/PopUp";
 
 export default function Banner() {
+    const [open, setOpen] = useState(false);
+    const handleClick = () => {
+        setOpen(!open);
+    }
     return (
         <>
+        {
+            open && <PopUp handleClick={handleClick}/>
+        }
             <motion.div
                 className="w-full text-white   md:px-8 lg:px-16 overflow-hidden"
                 initial={{ opacity: 0, y: 30 }}
@@ -43,7 +52,7 @@ export default function Banner() {
                                 <button className="primary-btn">
                                     Apply Now <img src="/images/arrow.png" alt="" />
                                 </button>
-                                <button className="secondary-btn">View Program Curriculum</button>
+                                <button className="secondary-btn" onClick={handleClick}>View Program Curriculum</button>
                             </div>
                         </div>
 
