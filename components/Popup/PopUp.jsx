@@ -4,6 +4,11 @@ import { RxCross1 } from "react-icons/rx";
 import "./pop.css";  
 
 const PopUp = ({handleClick}) => {
+  const handleSubmimt = (e) => {
+    e.preventDefault(); 
+    console.log("Form submitted");
+     
+  }
   return (
     <section className="popup-container">
       <div className="flex justify-between items-start">
@@ -17,14 +22,14 @@ const PopUp = ({handleClick}) => {
           </span>
         </div>
       </div>
-      <div className="grid grid-cols-2 items-start gap-4 form-container">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 items-start gap-4 form-container">
         <div>
           <img className="brochure-image"
             src="https://content.rethinksystems.in/brochure_preview_v2_6c76083ae0.png"
             alt=""
           />
         </div>
-        <form>
+        <form onSubmit={(e)=>{handleSubmimt(e)}} className="flex flex-col ">
           <label htmlFor="Name">Full Name <span>*</span></label>
           <input type="text" name="Name" />
           <label htmlFor="Phone Number">Phone Number <span>*</span></label>
