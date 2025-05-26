@@ -4,12 +4,12 @@ import React from 'react';
 
 export function SessionLab({ content }) {
   return (
-    <div>
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-2xl font-semibold">{content.title}</h3>
+    <div className='mt-16'>
+      <div className="flex justify-between items-center mb-4 border-b border-[#6154F3] pb-4">
+        <h3 className="text-2xl">{content.title}</h3>
         <div className="flex space-x-2">
-          <span className="bg-indigo-600 text-white text-xs px-3 py-1 rounded-full">SUNDAY - 12PM IST</span>
-          <span className="bg-orange-600 text-white text-xs px-3 py-1 rounded-full">LIVE + 3HRS</span>
+          <span className="bg-indigo-600 text-white text-xs px-3 py-3 rounded-lg">SATURDAY - 12PM IST</span>
+          <span className="bg-orange-600 text-white text-xs px-3 py-3 rounded-lg">LIVE + 3HRS</span>
         </div>
       </div>
       
