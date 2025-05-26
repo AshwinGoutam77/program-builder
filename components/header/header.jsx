@@ -21,18 +21,6 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import { motion } from 'framer-motion';
 import './page.css'
 
-const products = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-    { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
-const callsToAction = [
-    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-    { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
-
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [Scroll, setScroll] = useState(false);
@@ -58,7 +46,6 @@ export default function Header() {
         const handleAnchorClick = (e) => {
             const target = e.target;
 
-            // Traverse up if a child element is clicked inside an <a> tag
             const anchor = target.closest("a");
 
             if (anchor && anchor.getAttribute("href")?.startsWith("#")) {

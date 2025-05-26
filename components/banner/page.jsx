@@ -72,33 +72,40 @@ export default function Banner() {
                         </div>
 
                         <motion.div
-                            className="flex align-center justify-center mt-2 space-x-3 gap-10"
+                            className="flex align-center justify-between mt-2 space-x-3 gap-10"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1, delay: 1 }}
                         >
-                            <div>
+                            <div className="mt-6">
                                 <img
-                                    className="object-contain w-full h-24 mx-auto"
+                                    className="object-contain w-full h-10 mx-auto"
                                     src="/images/logo-1.png"
                                     alt="Logo 1"
                                 />
                             </div>
-                            <div>
+                            <div className="mt-6">
                                 <img
-                                    className="object-contain w-full h-24 mx-auto"
+                                    className="object-contain w-full h-10 mx-auto"
                                     src="/images/logo-2.png"
                                     alt="Logo 2"
                                 />
                             </div>
-                            <div className="m-auto">
+                            <div className="mt-6">
                                 <img
                                     className="object-contain w-full h-10 mx-auto"
                                     src="/images/logo-3.png"
                                     alt="Logo 3"
                                 />
                             </div>
-                            <div className="m-auto pt-4">
+                            <div className="mt-6">
+                                <img
+                                    className="object-contain w-full mx-auto h-10"
+                                    src="/images/logo-5.png"
+                                    alt="Logo 5"
+                                />
+                            </div>
+                            <div className="mt-6">
                                 <img
                                     className="object-contain w-full mx-auto h-10"
                                     src="/images/logo-4.png"
@@ -107,14 +114,7 @@ export default function Banner() {
                             </div>
                             <div>
                                 <img
-                                    className="object-contain w-full mx-auto h-24"
-                                    src="/images/logo-5.png"
-                                    alt="Logo 5"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                    className="object-contain w-full mx-auto h-24"
+                                    className="object-contain w-full mx-auto h-20"
                                     src="/images/logo-6.png"
                                     alt="Logo 6"
                                 />
