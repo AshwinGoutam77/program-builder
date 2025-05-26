@@ -593,10 +593,10 @@ export default function MobileCurriculum() {
           >
             <button
               onClick={() => toggleAccordion(i)}
-              className="w-full flex items-center justify-between p-4 focus:outline-none cursor-pointer"
+              className="w-full flex items-end justify-between p-4 focus:outline-none cursor-pointer"
               disabled={locked}
             >
-              <div className="flex items-center gap-4 text-left">
+              <div className="flex flex-wrap items-center gap-4 text-left">
                 <span className="week-box">Week {week}</span>
                 <span className="font-medium">{title}</span>
               </div>

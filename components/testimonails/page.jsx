@@ -294,7 +294,7 @@ Your program gave way more value. ❤️`,
               {(!Comments ? TestimonialData : TestimonialData2)?.map(
                 (item, index) => {
                   return (
-                    <div className="item" key={index}>
+                    <div className={`item ${!Comments && 'lovely-comments'}`} key={index}>
                       <div className="card">
                         <div className="card-body">
                           <p className="">{item?.description}</p>

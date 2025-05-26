@@ -92,7 +92,6 @@ export default function Header() {
                     </div>
 
                     <div className="hidden xl:flex items-center xl:flex-1 xl:justify-end gap-5">
-
                         <a href="#" className="text-sm/6 font-semibold text-white">
                             Home
                         </a>
@@ -135,7 +134,7 @@ export default function Header() {
                             <button
                                 type="button"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                                className="-m-2.5 rounded-md p-2.5 text-white"
                             >
                                 <span className="sr-only">Close menu</span>
                                 <XMarkIcon aria-hidden="true" className="size-6" />
@@ -143,31 +142,33 @@ export default function Header() {
                         </div>
                         <div className="mt-6 flow-root">
                             <div className="-my-6 divide-y divide-gray-500/10">
-                                <div className="space-y-2 py-6">
-                                    <a href=""></a>
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
-                                    >
-                                        About us
+                                <div className="flex flex-col gap-5 py-6">
+                                    <a href="#" className="text-white">
+                                        Home
                                     </a>
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
-                                    >
-                                        Program Overview
+                                    <a href="#" className="text-white">
+                                        For You?
                                     </a>
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
-                                    >
-                                        Our Alumni
+                                    <a href="#project-overview" className="text-white">
+                                        Program overview
                                     </a>
-                                    <a
-                                        href="#"
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white"
-                                    >
-                                        Sarvan Teaches
+                                    <a href="#curriculam" className="text-white">
+                                        Curriculum
+                                    </a>
+                                    <a href="#testimonials" className="text-white">
+                                        Testimonials
+                                    </a>
+                                    <a href="#master-speaker-section" className="text-white">
+                                        Guest speakers
+                                    </a>
+                                    <a href="#sarvan-teaching" className="text-white">
+                                        Products
+                                    </a>
+                                    <a href="#sarvan-teaching" className="text-white">
+                                        Pricing
+                                    </a>
+                                    <a href="#sarvan-teaching" className="text-white">
+                                        Contact
                                     </a>
                                 </div>
                             </div>
