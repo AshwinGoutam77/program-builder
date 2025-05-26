@@ -1,0 +1,12 @@
+.shap-rounded {
+  background: linear-gradient(
+    90deg,
+    rgb(119, 54, 217) 1%,
+    rgba(65, 101, 169, 1) 52%,
+    rgba(97, 84, 243, 1) 100%
+  );
+}
+.shap-rounded-innner{
+    background: #6154f3;
+    border: 4px solid #a19f9f;
+}
