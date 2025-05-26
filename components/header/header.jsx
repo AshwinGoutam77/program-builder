@@ -118,7 +118,7 @@ export default function Header() {
                         <a href="#curriculam" className="text-sm/6 font-semibold text-white">
                             Curriculum
                         </a>
-                        <a href="#about-section" className="text-sm/6 font-semibold text-white">
+                        <a href="#testimonials" className="text-sm/6 font-semibold text-white">
                             Testimonials
                         </a>
                         <a href="#project-overview" className="text-sm/6 font-semibold text-white">
