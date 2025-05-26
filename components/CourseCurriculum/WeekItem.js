@@ -5,7 +5,7 @@ export function WeekItem({ number, isActive, onClick }) {
   return (
     <div className="relative cursor-pointer" onClick={onClick}>
       {number < 8 && (
-        <div className="absolute left-4 top-5 h-[100px] w-0.5 bg-indigo-700/50"></div>
+        <div className="absolute left-4 top-5 h-[135px] w-0.5 bg-indigo-700/50"></div>
       )}
       
       <div className="flex items-start space-x-6 ">
